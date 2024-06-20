@@ -98,6 +98,13 @@ module.exports = require(__nccwpck_require__.ab + "nx.linux-x64-gnu.node")
 
 /***/ }),
 
+/***/ 67664:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+module.exports = require(__nccwpck_require__.ab + "nx.linux-x64-musl.node")
+
+/***/ }),
+
 /***/ 76237:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
@@ -66821,14 +66828,6 @@ module.exports = eval("require")("@nx/nx-linux-arm64-musl");
 
 /***/ }),
 
-/***/ 1247:
-/***/ ((module) => {
-
-module.exports = eval("require")("@nx/nx-linux-x64-musl");
-
-
-/***/ }),
-
 /***/ 62470:
 /***/ ((module) => {
 
@@ -78007,7 +78006,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = __nccwpck_require__(15595)
             } else {
-              nativeBinding = __nccwpck_require__(1247)
+              nativeBinding = __nccwpck_require__(67664)
             }
           } catch (e) {
             loadError = e
