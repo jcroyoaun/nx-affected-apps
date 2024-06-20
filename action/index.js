@@ -67100,14 +67100,6 @@ module.exports = require("node:util");
 
 /***/ }),
 
-/***/ 27138:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("nx");
-
-/***/ }),
-
 /***/ 22037:
 /***/ ((module) => {
 
@@ -89662,7 +89654,6 @@ const core = __nccwpck_require__(98423);
 const { Workspaces } = __nccwpck_require__(38191);
 const { execSync } = __nccwpck_require__(32081);
 const { join } = __nccwpck_require__(71017);
-const nx = __nccwpck_require__(27138);
 
 try {
   const tag = core.getInput('tag', { required: true });
@@ -89671,7 +89662,7 @@ try {
     join(process.cwd(), '..')
   ).readWorkspaceConfiguration();
 
-  const projects = execSync('npx nx show projects --affected')
+  const projects = execSync('yarn -s show projects --affected') 
     .toString('utf-8')
     .trim()
     .split('\n')

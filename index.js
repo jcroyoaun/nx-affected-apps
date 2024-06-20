@@ -2,7 +2,6 @@ const core = require('@actions/core');
 const { Workspaces } = require('@nrwl/devkit');
 const { execSync } = require('child_process');
 const { join } = require('path');
-const nx = require('nx');
 
 try {
   const tag = core.getInput('tag', { required: true });
@@ -11,7 +10,7 @@ try {
     join(process.cwd(), '..')
   ).readWorkspaceConfiguration();
 
-  const projects = execSync('npx nx show projects --affected')
+  const projects = execSync('yarn -s show projects --affected') 
     .toString('utf-8')
     .trim()
     .split('\n')

@@ -9,5 +9,9 @@ outputs:
     description: 'Space-separated list of affected projects'
 runs:
   using: 'node20'
-  pre: 'npm ci'
   main: 'action/index.js'
+  pre-steps:
+    - name: Install dependencies
+      run: npm install
+      shell: bash
+
