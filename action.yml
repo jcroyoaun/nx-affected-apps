@@ -8,5 +8,5 @@ outputs:
   affected_projects:
     description: 'Space-separated list of affected projects'
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'action/index.js'
