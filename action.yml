@@ -9,4 +9,4 @@ outputs:
     description: 'Space-separated list of affected projects'
 runs:
   using: 'node16'
-  main: 'index.js'
+  main: 'action/index.js'
