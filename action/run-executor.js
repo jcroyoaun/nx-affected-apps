@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = require("fs");
-const run_1 = require("../src/command-line/run");
+const run_1 = require("../src/command-line/run/run");
 if (process.env.NX_TERMINAL_OUTPUT_PATH) {
     setUpOutputWatching(process.env.NX_TERMINAL_CAPTURE_STDERR === 'true', process.env.NX_STREAM_OUTPUT === 'true');
 }
@@ -9,25 +9,7 @@ if (!process.env.NX_WORKSPACE_ROOT) {
     console.error('Invalid Nx command invocation');
     process.exit(1);
 }
-requireCli();
-function requireCli() {
-    process.env.NX_CLI_SET = 'true';
-    try {
-        const args = JSON.parse(process.argv[2]);
-        (0, run_1.run)(process.cwd(), process.env.NX_WORKSPACE_ROOT, args.targetDescription, args.overrides, args.isVerbose, false)
-            .then((statusCode) => {
-            process.exit(statusCode);
-        })
-            .catch((e) => {
-            console.error(`Unexpected error`);
-            console.error(e);
-        });
-    }
-    catch (e) {
-        console.error(`Could not find 'nx' module in this workspace.`, e);
-        process.exit(1);
-    }
-}
+process.env.NX_CLI_SET = 'true';
 /**
  * We need to collect all stdout and stderr and store it, so the caching mechanism
  * could store it.
@@ -72,4 +54,13 @@ function setUpOutputWatching(captureStderr, streamOutput) {
         }
     });
 }
-//# sourceMappingURL=run-executor.js.map
+process.on('message', async (message) => {
+    try {
+        const statusCode = await (0, run_1.run)(process.cwd(), process.env.NX_WORKSPACE_ROOT, message.targetDescription, message.overrides, message.isVerbose, message.taskGraph);
+        process.exit(statusCode);
+    }
+    catch (e) {
+        console.error(e);
+        process.exit(1);
+    }
+});

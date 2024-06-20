@@ -59,4 +59,3 @@ function mostRecentMTime(records) {
     });
     return mostRecentTime;
 }
-//# sourceMappingURL=remove-old-cache-records.js.map
