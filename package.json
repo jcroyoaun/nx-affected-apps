@@ -11,6 +11,7 @@
   "dependencies": {
     "@actions/core": "^1.6.0",
     "@actions/github": "^6.0.0",
-    "@nrwl/devkit": "^19.3.0"
+    "@nrwl/devkit": "^19.3.0",
+    "nx": "^19.3.0"
   }
 }
