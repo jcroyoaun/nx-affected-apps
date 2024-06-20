@@ -89662,7 +89662,7 @@ try {
     join(process.cwd(), '..')
   ).readWorkspaceConfiguration();
 
-  const projects = execSync('yarn -s show projects --affected') 
+  const projects = execSync('yarn -s nx show projects --affected') 
     .toString('utf-8')
     .trim()
     .split('\n')
