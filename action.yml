@@ -1,0 +1,12 @@
+name: 'Nx Affected Projects'
+description: 'Get affected projects in an Nx workspace'
+inputs:
+  tag:
+    description: 'Tag to filter affected projects'
+    required: true
+outputs:
+  affected_projects:
+    description: 'Space-separated list of affected projects'
+runs:
+  using: 'node16'
+  main: 'index.js'
