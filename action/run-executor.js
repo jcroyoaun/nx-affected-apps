@@ -60,7 +60,7 @@ process.on('message', async (message) => {
         process.exit(statusCode);
     }
     catch (e) {
-        console.error(e);
+        console.error(`Could not find 'nx' module in this workspace.`, e);
         process.exit(1);
     }
 });

@@ -1,0 +1,3017 @@
+{
+  "version": "6.0",
+  "nxVersion": "16.10.0",
+  "deps": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^6.0.0",
+    "@nrwl/devkit": "^16.9.1",
+    "nx": "^16.9.1"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".gitignore",
+        "hash": "4512595388722037514"
+      },
+      {
+        "file": ".nx/workspace-data/file-map.json",
+        "hash": "13022010454064528273"
+      },
+      {
+        "file": ".nx/workspace-data/lockfile.hash",
+        "hash": "7650556974504733901"
+      },
+      {
+        "file": ".nx/workspace-data/parsed-lock-file.json",
+        "hash": "13378359988339804893"
+      },
+      {
+        "file": ".nx/workspace-data/project-graph.json",
+        "hash": "10428033190499340707"
+      },
+      {
+        "file": "README.md",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "action/index.js",
+        "hash": "16273394287566728813"
+      },
+      {
+        "file": "action/native-bindings.js",
+        "hash": "10583173582211791139"
+      },
+      {
+        "file": "action/nx/nx/.eslintrc.json",
+        "hash": "8071702732767475477"
+      },
+      {
+        "file": "action/nx/nx/LICENSE",
+        "hash": "7547592062233530626"
+      },
+      {
+        "file": "action/nx/nx/README.md",
+        "hash": "2913315671019255976"
+      },
+      {
+        "file": "action/nx/nx/bin/init-local.d.ts",
+        "hash": "3527258250298041026"
+      },
+      {
+        "file": "action/nx/nx/bin/init-local.js",
+        "hash": "17757429625853700122"
+      },
+      {
+        "file": "action/nx/nx/bin/nx-cloud.d.ts",
+        "hash": "10914943506805851260"
+      },
+      {
+        "file": "action/nx/nx/bin/nx-cloud.js",
+        "hash": "6841625642934531502"
+      },
+      {
+        "file": "action/nx/nx/bin/nx.d.ts",
+        "hash": "10914943506805851260"
+      },
+      {
+        "file": "action/nx/nx/bin/nx.js",
+        "hash": "7195510906864064335"
+      },
+      {
+        "file": "action/nx/nx/bin/post-install.d.ts",
+        "hash": "4595979742548113990"
+      },
+      {
+        "file": "action/nx/nx/bin/post-install.js",
+        "hash": "11338536350267108744"
+      },
+      {
+        "file": "action/nx/nx/bin/run-executor.d.ts",
+        "hash": "4595979742548113990"
+      },
+      {
+        "file": "action/nx/nx/bin/run-executor.js",
+        "hash": "11098590799264319067"
+      },
+      {
+        "file": "action/nx/nx/executors.json",
+        "hash": "10837991398407035185"
+      },
+      {
+        "file": "action/nx/nx/generators.json",
+        "hash": "14424497955092104994"
+      },
+      {
+        "file": "action/nx/nx/migrations.json",
+        "hash": "4904453709726317218"
+      },
+      {
+        "file": "action/nx/nx/package.json",
+        "hash": "13491841027270800216"
+      },
+      {
+        "file": "action/nx/nx/plugins/package-json.d.ts",
+        "hash": "4595979742548113990"
+      },
+      {
+        "file": "action/nx/nx/plugins/package-json.js",
+        "hash": "10045974066627289449"
+      },
+      {
+        "file": "action/nx/nx/presets/core.json",
+        "hash": "15753941481085060538"
+      },
+      {
+        "file": "action/nx/nx/presets/npm.json",
+        "hash": "5132448381175513343"
+      },
+      {
+        "file": "action/nx/nx/release/changelog-renderer/index.d.ts",
+        "hash": "4436297838147162154"
+      },
+      {
+        "file": "action/nx/nx/release/changelog-renderer/index.js",
+        "hash": "11435798502963072974"
+      },
+      {
+        "file": "action/nx/nx/release/index.d.ts",
+        "hash": "588970232890975886"
+      },
+      {
+        "file": "action/nx/nx/release/index.js",
+        "hash": "2337360303374570401"
+      },
+      {
+        "file": "action/nx/nx/schemas/nx-schema.json",
+        "hash": "13692018261591054653"
+      },
+      {
+        "file": "action/nx/nx/schemas/project-schema.json",
+        "hash": "13725898962989512723"
+      },
+      {
+        "file": "action/nx/nx/schemas/workspace-schema.json",
+        "hash": "12831217325618769357"
+      },
+      {
+        "file": "action/nx/nx/src/adapter/angular-json.d.ts",
+        "hash": "8261989518068961046"
+      },
+      {
+        "file": "action/nx/nx/src/adapter/angular-json.js",
+        "hash": "13910249928478890494"
+      },
+      {
+        "file": "action/nx/nx/src/adapter/compat.d.ts",
+        "hash": "16361326632474873850"
+      },
+      {
+        "file": "action/nx/nx/src/adapter/compat.js",
+        "hash": "1625234445029367542"
+      },
+      {
+        "file": "action/nx/nx/src/adapter/decorate-cli.d.ts",
+        "hash": "9505334839598176430"
+      },
+      {
+        "file": "action/nx/nx/src/adapter/decorate-cli.js",
+        "hash": "4455136593918326609"
+      },
+      {
+        "file": "action/nx/nx/src/adapter/ngcli-adapter.d.ts",
+        "hash": "16915298028613170423"
+      },
+      {
+        "file": "action/nx/nx/src/adapter/ngcli-adapter.js",
+        "hash": "7850080078632297987"
+      },
+      {
+        "file": "action/nx/nx/src/adapter/rxjs-for-await.d.ts",
+        "hash": "8149405748938251621"
+      },
+      {
+        "file": "action/nx/nx/src/adapter/rxjs-for-await.js",
+        "hash": "452540779522441578"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/add/add.d.ts",
+        "hash": "10997408912745269243"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/add/add.js",
+        "hash": "3258455537109583061"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/add/command-object.d.ts",
+        "hash": "12784184854385098128"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/add/command-object.js",
+        "hash": "12844380054025887608"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/affected/affected.d.ts",
+        "hash": "14440381303954904151"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/affected/affected.js",
+        "hash": "8387618765135071732"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/affected/command-object.d.ts",
+        "hash": "1981571995844791050"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/affected/command-object.js",
+        "hash": "16132111308293672678"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/connect/command-object.d.ts",
+        "hash": "5126638410955476185"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/connect/command-object.js",
+        "hash": "15968528650066661312"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/connect/connect-to-nx-cloud.d.ts",
+        "hash": "16003902706548135315"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/connect/connect-to-nx-cloud.js",
+        "hash": "17735234017373559674"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/connect/view-logs.d.ts",
+        "hash": "5279964270328244624"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/connect/view-logs.js",
+        "hash": "3290936917028186593"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/daemon/command-object.d.ts",
+        "hash": "8314108972906133763"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/daemon/command-object.js",
+        "hash": "6639010971428304350"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/daemon/daemon.d.ts",
+        "hash": "10953898448939407840"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/daemon/daemon.js",
+        "hash": "508994996296089948"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/deprecated/command-objects.d.ts",
+        "hash": "12454833680039791429"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/deprecated/command-objects.js",
+        "hash": "464548712185691813"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/examples.d.ts",
+        "hash": "4954633188035670167"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/examples.js",
+        "hash": "13011802637107318060"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/exec/command-object.d.ts",
+        "hash": "6528264927825070145"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/exec/command-object.js",
+        "hash": "662232074886611928"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/exec/exec.d.ts",
+        "hash": "18030590761792135721"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/exec/exec.js",
+        "hash": "9089860049402203778"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/format/command-object.d.ts",
+        "hash": "7791327186083493630"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/format/command-object.js",
+        "hash": "1339526507647877050"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/format/format.d.ts",
+        "hash": "11963654757951101169"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/format/format.js",
+        "hash": "12736319151902851680"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/generate/command-object.d.ts",
+        "hash": "9221776484014244382"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/generate/command-object.js",
+        "hash": "15037776922307832537"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/generate/generate.d.ts",
+        "hash": "2431844862939949315"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/generate/generate.js",
+        "hash": "16809809278289334830"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/generate/generator-utils.d.ts",
+        "hash": "8120752680808120725"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/generate/generator-utils.js",
+        "hash": "9255609198653893565"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/graph/command-object.d.ts",
+        "hash": "949453454856701668"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/graph/command-object.js",
+        "hash": "2523827257442759405"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/graph/graph.d.ts",
+        "hash": "12224217251823391823"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/graph/graph.js",
+        "hash": "15716051307373934046"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/command-object.d.ts",
+        "hash": "796074555274676063"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/command-object.js",
+        "hash": "4190526398843041655"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/add-nx-to-monorepo.d.ts",
+        "hash": "942248085830846654"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/add-nx-to-monorepo.js",
+        "hash": "8049219746168226073"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/add-nx-to-nest.d.ts",
+        "hash": "16734094091040012994"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/add-nx-to-nest.js",
+        "hash": "15922801576738944677"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/add-nx-to-npm-repo.d.ts",
+        "hash": "6392304171684122049"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/add-nx-to-npm-repo.js",
+        "hash": "6963637319410247469"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/angular/index.d.ts",
+        "hash": "16352243589570115851"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/angular/index.js",
+        "hash": "6347337005533475275"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/angular/integrated-workspace.d.ts",
+        "hash": "11886314285913630245"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/angular/integrated-workspace.js",
+        "hash": "16771379047885140849"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/angular/legacy-angular-versions.d.ts",
+        "hash": "7083202017067233406"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/angular/legacy-angular-versions.js",
+        "hash": "2438684417001240918"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/angular/standalone-workspace.d.ts",
+        "hash": "5672340405947922930"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/angular/standalone-workspace.js",
+        "hash": "14430102330720794593"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/angular/types.d.ts",
+        "hash": "15567020543487920050"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/angular/types.js",
+        "hash": "10533815908077531553"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/dot-nx/add-nx-scripts.d.ts",
+        "hash": "1683904048407211395"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/dot-nx/add-nx-scripts.js",
+        "hash": "8195797169057233586"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/dot-nx/nxw.d.ts",
+        "hash": "4595979742548113990"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/dot-nx/nxw.js",
+        "hash": "10114109314637777537"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/add-craco-commands-to-package-scripts.d.ts",
+        "hash": "13975992936836323994"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/add-craco-commands-to-package-scripts.js",
+        "hash": "9096556927623707090"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/add-vite-commands-to-package-scripts.d.ts",
+        "hash": "8161245568184398674"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/add-vite-commands-to-package-scripts.js",
+        "hash": "2838572821650973869"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/check-for-custom-webpack-setup.d.ts",
+        "hash": "5219258110655518543"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/check-for-custom-webpack-setup.js",
+        "hash": "15559495500477657270"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/check-for-uncommitted-changes.d.ts",
+        "hash": "7011488535936421337"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/check-for-uncommitted-changes.js",
+        "hash": "14400974155752750931"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/clean-up-files.d.ts",
+        "hash": "13168768602145198182"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/clean-up-files.js",
+        "hash": "111064060405658030"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/index.d.ts",
+        "hash": "11836346182005685493"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/index.js",
+        "hash": "12301972919588241739"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/read-name-from-package-json.d.ts",
+        "hash": "16154505904092776641"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/read-name-from-package-json.js",
+        "hash": "13600405307138791959"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/rename-js-to-jsx.d.ts",
+        "hash": "8775042918573778227"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/rename-js-to-jsx.js",
+        "hash": "11957093955042100926"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/tsconfig-setup.d.ts",
+        "hash": "176165337720970933"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/tsconfig-setup.js",
+        "hash": "12545095097752190430"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/write-craco-config.d.ts",
+        "hash": "2663103241528131238"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/write-craco-config.js",
+        "hash": "7063251896203247903"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/write-vite-config.d.ts",
+        "hash": "2629782984989194521"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/write-vite-config.js",
+        "hash": "6135402656496774025"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/write-vite-index-html.d.ts",
+        "hash": "1188388857991805176"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/react/write-vite-index-html.js",
+        "hash": "14589137760423638946"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/utils.d.ts",
+        "hash": "14854829933590517385"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/implementation/utils.js",
+        "hash": "7666205454914741203"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/init-v1.d.ts",
+        "hash": "6939594323305488882"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/init-v1.js",
+        "hash": "3450708530886398766"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/init-v2.d.ts",
+        "hash": "14642067753685785124"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/init/init-v2.js",
+        "hash": "10432471559081103523"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/list/command-object.d.ts",
+        "hash": "4039841163365481455"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/list/command-object.js",
+        "hash": "5117837256870053876"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/list/list.d.ts",
+        "hash": "9287079845788707725"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/list/list.js",
+        "hash": "14802755568402583840"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/migrate/command-object.d.ts",
+        "hash": "5467235985118378481"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/migrate/command-object.js",
+        "hash": "4905893098035283556"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/migrate/migrate.d.ts",
+        "hash": "8073812466325402299"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/migrate/migrate.js",
+        "hash": "15311401951194345957"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/new/command-object.d.ts",
+        "hash": "10525481537114291145"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/new/command-object.js",
+        "hash": "17994451521259347063"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/new/new.d.ts",
+        "hash": "9153661780373513113"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/new/new.js",
+        "hash": "2831508151698259261"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/nx-commands.d.ts",
+        "hash": "18228919238305129577"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/nx-commands.js",
+        "hash": "17024428657937312488"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/changelog.d.ts",
+        "hash": "5632861424916716768"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/changelog.js",
+        "hash": "1143513136885880668"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/command-object.d.ts",
+        "hash": "7189204550967224425"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/command-object.js",
+        "hash": "9226824105748504549"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/config/config.d.ts",
+        "hash": "2628677071097358630"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/config/config.js",
+        "hash": "12383141086100673063"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/config/conventional-commits.d.ts",
+        "hash": "13045643998677792231"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/config/conventional-commits.js",
+        "hash": "11117577154329936035"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/config/filter-release-groups.d.ts",
+        "hash": "532138003022645717"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/config/filter-release-groups.js",
+        "hash": "3943996793205957626"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/config/version-plans.d.ts",
+        "hash": "3458618143525985143"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/config/version-plans.js",
+        "hash": "9730888092376614307"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/index.d.ts",
+        "hash": "15889137754938078933"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/index.js",
+        "hash": "8321098215696476203"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/plan.d.ts",
+        "hash": "16133638608483589491"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/plan.js",
+        "hash": "12100381331359687722"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/publish.d.ts",
+        "hash": "871504059995903152"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/publish.js",
+        "hash": "9853291721914262013"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/release.d.ts",
+        "hash": "14953726026299679053"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/release.js",
+        "hash": "7233601089119935854"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/batch-projects-by-generator-config.d.ts",
+        "hash": "8214974415948628180"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/batch-projects-by-generator-config.js",
+        "hash": "16734144562012352454"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/exec-command.d.ts",
+        "hash": "14685605344709914452"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/exec-command.js",
+        "hash": "17868464441314480878"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/git.d.ts",
+        "hash": "8308363643370468052"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/git.js",
+        "hash": "14962198225226475442"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/github.d.ts",
+        "hash": "6004111132880219384"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/github.js",
+        "hash": "16691400387352515131"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/launch-editor.d.ts",
+        "hash": "11946536963727272605"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/launch-editor.js",
+        "hash": "3628510199258135640"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/markdown.d.ts",
+        "hash": "18266188678751225274"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/markdown.js",
+        "hash": "16420927979382565640"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/print-changes.d.ts",
+        "hash": "16236599536415517716"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/print-changes.js",
+        "hash": "16457150103185719469"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/resolve-changelog-renderer.d.ts",
+        "hash": "15180243990973074612"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/resolve-changelog-renderer.js",
+        "hash": "2465901870516089753"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/resolve-nx-json-error-message.d.ts",
+        "hash": "17455288664002068893"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/resolve-nx-json-error-message.js",
+        "hash": "1404667753977664638"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/resolve-semver-specifier.d.ts",
+        "hash": "4277638380476380453"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/resolve-semver-specifier.js",
+        "hash": "5675517722027275417"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/semver.d.ts",
+        "hash": "14994947166628734335"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/semver.js",
+        "hash": "5717398645764492444"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/shared.d.ts",
+        "hash": "13638634058901544772"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/utils/shared.js",
+        "hash": "1738439565752692518"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/version.d.ts",
+        "hash": "5767898515267514471"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/release/version.js",
+        "hash": "2717649084430011308"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/repair/command-object.d.ts",
+        "hash": "14826629937496714026"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/repair/command-object.js",
+        "hash": "6573250880669706169"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/repair/repair.d.ts",
+        "hash": "1826278243956146899"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/repair/repair.js",
+        "hash": "2874454905039384746"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/report/command-object.d.ts",
+        "hash": "8205591014753488057"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/report/command-object.js",
+        "hash": "17929815403384447718"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/report/report.d.ts",
+        "hash": "17732073063697662285"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/report/report.js",
+        "hash": "13527302731404505753"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/reset/command-object.d.ts",
+        "hash": "1655267297601650286"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/reset/command-object.js",
+        "hash": "3692535825604688526"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/reset/reset.d.ts",
+        "hash": "8808789748233295344"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/reset/reset.js",
+        "hash": "7109952988629912000"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/run/command-object.d.ts",
+        "hash": "12750276944599218645"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/run/command-object.js",
+        "hash": "9679663611409052041"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/run/executor-utils.d.ts",
+        "hash": "6431329981190613108"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/run/executor-utils.js",
+        "hash": "10853577998688706912"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/run/run-one.d.ts",
+        "hash": "16952799009057266058"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/run/run-one.js",
+        "hash": "5118012865567834953"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/run/run.d.ts",
+        "hash": "4611750343311922733"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/run/run.js",
+        "hash": "10784628491311767620"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/run-many/command-object.d.ts",
+        "hash": "3207169477782938622"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/run-many/command-object.js",
+        "hash": "12582554409062884388"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/run-many/run-many.d.ts",
+        "hash": "15026248227755479329"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/run-many/run-many.js",
+        "hash": "11921975210070124880"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/show/command-object.d.ts",
+        "hash": "12422657421333542466"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/show/command-object.js",
+        "hash": "527411110576060656"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/show/project.d.ts",
+        "hash": "18147745840546465776"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/show/project.js",
+        "hash": "5936145195921960979"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/show/projects.d.ts",
+        "hash": "14044494133076213130"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/show/projects.js",
+        "hash": "14673768445737911720"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/watch/command-object.d.ts",
+        "hash": "1144624281375615847"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/watch/command-object.js",
+        "hash": "13601766923701147409"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/watch/watch.d.ts",
+        "hash": "3373781700933335832"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/watch/watch.js",
+        "hash": "4112294949563573837"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/yargs-utils/documentation.d.ts",
+        "hash": "12032111129626121998"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/yargs-utils/documentation.js",
+        "hash": "1428245577160428945"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/yargs-utils/shared-options.d.ts",
+        "hash": "10967818718560672419"
+      },
+      {
+        "file": "action/nx/nx/src/command-line/yargs-utils/shared-options.js",
+        "hash": "15086812802848721829"
+      },
+      {
+        "file": "action/nx/nx/src/commands-runner/command-graph.d.ts",
+        "hash": "4661530105502709195"
+      },
+      {
+        "file": "action/nx/nx/src/commands-runner/command-graph.js",
+        "hash": "10533815908077531553"
+      },
+      {
+        "file": "action/nx/nx/src/commands-runner/create-command-graph.d.ts",
+        "hash": "3073806216902026252"
+      },
+      {
+        "file": "action/nx/nx/src/commands-runner/create-command-graph.js",
+        "hash": "16699418591408338331"
+      },
+      {
+        "file": "action/nx/nx/src/commands-runner/get-command-projects.d.ts",
+        "hash": "12908893483881303222"
+      },
+      {
+        "file": "action/nx/nx/src/commands-runner/get-command-projects.js",
+        "hash": "5438732526270941905"
+      },
+      {
+        "file": "action/nx/nx/src/config/calculate-default-project-name.d.ts",
+        "hash": "3013873264915918300"
+      },
+      {
+        "file": "action/nx/nx/src/config/calculate-default-project-name.js",
+        "hash": "5691028883539551208"
+      },
+      {
+        "file": "action/nx/nx/src/config/configuration.d.ts",
+        "hash": "7162862636563459284"
+      },
+      {
+        "file": "action/nx/nx/src/config/configuration.js",
+        "hash": "5835705463871617241"
+      },
+      {
+        "file": "action/nx/nx/src/config/misc-interfaces.d.ts",
+        "hash": "10258096790138421677"
+      },
+      {
+        "file": "action/nx/nx/src/config/misc-interfaces.js",
+        "hash": "10533815908077531553"
+      },
+      {
+        "file": "action/nx/nx/src/config/nx-json.d.ts",
+        "hash": "3401297260173948361"
+      },
+      {
+        "file": "action/nx/nx/src/config/nx-json.js",
+        "hash": "5838914818219612732"
+      },
+      {
+        "file": "action/nx/nx/src/config/project-graph.d.ts",
+        "hash": "1987309009005183321"
+      },
+      {
+        "file": "action/nx/nx/src/config/project-graph.js",
+        "hash": "14463390814200501526"
+      },
+      {
+        "file": "action/nx/nx/src/config/schema-utils.d.ts",
+        "hash": "1065712439549384624"
+      },
+      {
+        "file": "action/nx/nx/src/config/schema-utils.js",
+        "hash": "991446095691633081"
+      },
+      {
+        "file": "action/nx/nx/src/config/task-graph.d.ts",
+        "hash": "14332138408389660401"
+      },
+      {
+        "file": "action/nx/nx/src/config/task-graph.js",
+        "hash": "10533815908077531553"
+      },
+      {
+        "file": "action/nx/nx/src/config/to-project-name.d.ts",
+        "hash": "1246857226903605128"
+      },
+      {
+        "file": "action/nx/nx/src/config/to-project-name.js",
+        "hash": "7746568906263518724"
+      },
+      {
+        "file": "action/nx/nx/src/config/workspace-json-project-json.d.ts",
+        "hash": "18351537203110371463"
+      },
+      {
+        "file": "action/nx/nx/src/config/workspace-json-project-json.js",
+        "hash": "10533815908077531553"
+      },
+      {
+        "file": "action/nx/nx/src/core/graph/environment.js",
+        "hash": "9351363134634518338"
+      },
+      {
+        "file": "action/nx/nx/src/core/graph/favicon.ico",
+        "hash": "9303420814833116677"
+      },
+      {
+        "file": "action/nx/nx/src/core/graph/index.html",
+        "hash": "11296195180087135821"
+      },
+      {
+        "file": "action/nx/nx/src/core/graph/main.js",
+        "hash": "5545012307248776783"
+      },
+      {
+        "file": "action/nx/nx/src/core/graph/runtime.js",
+        "hash": "9652903316845995179"
+      },
+      {
+        "file": "action/nx/nx/src/core/graph/styles.css",
+        "hash": "16874162949139034409"
+      },
+      {
+        "file": "action/nx/nx/src/core/graph/styles.js",
+        "hash": "14950091671588121673"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/cache.d.ts",
+        "hash": "18072796624895619876"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/cache.js",
+        "hash": "14791822453365514043"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/client/client.d.ts",
+        "hash": "14558890508218366814"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/client/client.js",
+        "hash": "8753747914999235468"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/client/daemon-socket-messenger.d.ts",
+        "hash": "13388248126549640944"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/client/daemon-socket-messenger.js",
+        "hash": "14070762289173237868"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/client/exec-is-server-available.d.ts",
+        "hash": "4595979742548113990"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/client/exec-is-server-available.js",
+        "hash": "4780687505099750073"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/client/generate-help-output.d.ts",
+        "hash": "17068864673985366570"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/client/generate-help-output.js",
+        "hash": "9468972300977648871"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/is-on-daemon.d.ts",
+        "hash": "15203558318563794530"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/is-on-daemon.js",
+        "hash": "10569653666340021689"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/message-types/get-context-file-data.d.ts",
+        "hash": "15808370933752573412"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/message-types/get-context-file-data.js",
+        "hash": "1355252220364205912"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/message-types/get-files-in-directory.d.ts",
+        "hash": "17306957666862725333"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/message-types/get-files-in-directory.js",
+        "hash": "2467174669665567617"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/message-types/get-nx-workspace-files.d.ts",
+        "hash": "10127084919444904696"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/message-types/get-nx-workspace-files.js",
+        "hash": "7749549684844496615"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/message-types/glob.d.ts",
+        "hash": "14637571450547606212"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/message-types/glob.js",
+        "hash": "2553859784725211513"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/message-types/hash-glob.d.ts",
+        "hash": "5301500634232443365"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/message-types/hash-glob.js",
+        "hash": "6452091378722485579"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/message-types/update-context-files.d.ts",
+        "hash": "5974522294790524557"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/message-types/update-context-files.js",
+        "hash": "18397316883496453047"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/file-watching/changed-projects.d.ts",
+        "hash": "2626275000625212109"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/file-watching/changed-projects.js",
+        "hash": "12721531530896743425"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/file-watching/file-watcher-sockets.d.ts",
+        "hash": "12862310803749961956"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/file-watching/file-watcher-sockets.js",
+        "hash": "17984425137368546862"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/handle-context-file-data.d.ts",
+        "hash": "16186242014739727289"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/handle-context-file-data.js",
+        "hash": "15665185524957408169"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/handle-get-files-in-directory.d.ts",
+        "hash": "16874369449822046649"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/handle-get-files-in-directory.js",
+        "hash": "15901852544048262749"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/handle-glob.d.ts",
+        "hash": "8437702117330951012"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/handle-glob.js",
+        "hash": "11603444887304081968"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/handle-hash-glob.d.ts",
+        "hash": "3357856019377380179"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/handle-hash-glob.js",
+        "hash": "12618747864498320950"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/handle-hash-tasks.d.ts",
+        "hash": "11923576756114250055"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/handle-hash-tasks.js",
+        "hash": "10144890315891989473"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/handle-nx-workspace-files.d.ts",
+        "hash": "2259018491732663572"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/handle-nx-workspace-files.js",
+        "hash": "12045478823808411091"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/handle-outputs-tracking.d.ts",
+        "hash": "18406555654271646323"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/handle-outputs-tracking.js",
+        "hash": "17557164580204627732"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/handle-process-in-background.d.ts",
+        "hash": "2589849091612599573"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/handle-process-in-background.js",
+        "hash": "9790057125518905927"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/handle-request-project-graph.d.ts",
+        "hash": "9351527380444055281"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/handle-request-project-graph.js",
+        "hash": "13852652286534144263"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/handle-request-shutdown.d.ts",
+        "hash": "3506991916160473096"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/handle-request-shutdown.js",
+        "hash": "8197457755649666988"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/logger.d.ts",
+        "hash": "8303846794213257648"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/logger.js",
+        "hash": "13138018574963253423"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/outputs-tracking.d.ts",
+        "hash": "5652064407732239527"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/outputs-tracking.js",
+        "hash": "9456180996070744753"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/plugins.d.ts",
+        "hash": "14520105641733152639"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/plugins.js",
+        "hash": "8822386671724583779"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/project-graph-incremental-recomputation.d.ts",
+        "hash": "3828757579426117129"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/project-graph-incremental-recomputation.js",
+        "hash": "11758603272681617725"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/server.d.ts",
+        "hash": "15874094991450981445"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/server.js",
+        "hash": "5707042268621264707"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/shutdown-utils.d.ts",
+        "hash": "12193034126903746071"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/shutdown-utils.js",
+        "hash": "7959911582861204637"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/start.d.ts",
+        "hash": "4595979742548113990"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/start.js",
+        "hash": "2411952971876160295"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/watcher.d.ts",
+        "hash": "10606130223394306038"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/server/watcher.js",
+        "hash": "7756105879291430840"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/socket-utils.d.ts",
+        "hash": "2787506070256685226"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/socket-utils.js",
+        "hash": "10725879203511827687"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/tmp-dir.d.ts",
+        "hash": "15126804181071923108"
+      },
+      {
+        "file": "action/nx/nx/src/daemon/tmp-dir.js",
+        "hash": "10281559095979731607"
+      },
+      {
+        "file": "action/nx/nx/src/devkit-exports.d.ts",
+        "hash": "7756206638801799687"
+      },
+      {
+        "file": "action/nx/nx/src/devkit-exports.js",
+        "hash": "6558617579015276088"
+      },
+      {
+        "file": "action/nx/nx/src/devkit-internals.d.ts",
+        "hash": "12070111719314521218"
+      },
+      {
+        "file": "action/nx/nx/src/devkit-internals.js",
+        "hash": "1619260522050434317"
+      },
+      {
+        "file": "action/nx/nx/src/devkit-testing-exports.d.ts",
+        "hash": "8630696590165632253"
+      },
+      {
+        "file": "action/nx/nx/src/devkit-testing-exports.js",
+        "hash": "1616525976913635443"
+      },
+      {
+        "file": "action/nx/nx/src/executors/noop/noop.impl.d.ts",
+        "hash": "1835575373682369332"
+      },
+      {
+        "file": "action/nx/nx/src/executors/noop/noop.impl.js",
+        "hash": "11756705340094987052"
+      },
+      {
+        "file": "action/nx/nx/src/executors/noop/schema.json",
+        "hash": "11537685197534230473"
+      },
+      {
+        "file": "action/nx/nx/src/executors/run-commands/run-commands.impl.d.ts",
+        "hash": "11797306518551420386"
+      },
+      {
+        "file": "action/nx/nx/src/executors/run-commands/run-commands.impl.js",
+        "hash": "17397326848148960576"
+      },
+      {
+        "file": "action/nx/nx/src/executors/run-commands/schema.json",
+        "hash": "3796607080530355107"
+      },
+      {
+        "file": "action/nx/nx/src/executors/run-script/run-script.impl.d.ts",
+        "hash": "10593165841588297033"
+      },
+      {
+        "file": "action/nx/nx/src/executors/run-script/run-script.impl.js",
+        "hash": "7159485833754905500"
+      },
+      {
+        "file": "action/nx/nx/src/executors/run-script/schema.json",
+        "hash": "1336841552198843398"
+      },
+      {
+        "file": "action/nx/nx/src/executors/utils/convert-nx-executor.d.ts",
+        "hash": "16252501822370803225"
+      },
+      {
+        "file": "action/nx/nx/src/executors/utils/convert-nx-executor.js",
+        "hash": "12431577958992608888"
+      },
+      {
+        "file": "action/nx/nx/src/generators/internal-utils/format-changed-files-with-prettier-if-available.d.ts",
+        "hash": "6607958603356547045"
+      },
+      {
+        "file": "action/nx/nx/src/generators/internal-utils/format-changed-files-with-prettier-if-available.js",
+        "hash": "13506611853765052335"
+      },
+      {
+        "file": "action/nx/nx/src/generators/testing-utils/create-tree-with-empty-workspace.d.ts",
+        "hash": "994390660542070473"
+      },
+      {
+        "file": "action/nx/nx/src/generators/testing-utils/create-tree-with-empty-workspace.js",
+        "hash": "12538232981198116959"
+      },
+      {
+        "file": "action/nx/nx/src/generators/testing-utils/create-tree.d.ts",
+        "hash": "4142610127429078703"
+      },
+      {
+        "file": "action/nx/nx/src/generators/testing-utils/create-tree.js",
+        "hash": "18415786506035316087"
+      },
+      {
+        "file": "action/nx/nx/src/generators/tree.d.ts",
+        "hash": "8216459693927517558"
+      },
+      {
+        "file": "action/nx/nx/src/generators/tree.js",
+        "hash": "11501193844724679813"
+      },
+      {
+        "file": "action/nx/nx/src/generators/utils/glob.d.ts",
+        "hash": "17399525820590291310"
+      },
+      {
+        "file": "action/nx/nx/src/generators/utils/glob.js",
+        "hash": "5843644837389314408"
+      },
+      {
+        "file": "action/nx/nx/src/generators/utils/json.d.ts",
+        "hash": "16900841809578109125"
+      },
+      {
+        "file": "action/nx/nx/src/generators/utils/json.js",
+        "hash": "6814543180961303704"
+      },
+      {
+        "file": "action/nx/nx/src/generators/utils/nx-json.d.ts",
+        "hash": "14106866838686002939"
+      },
+      {
+        "file": "action/nx/nx/src/generators/utils/nx-json.js",
+        "hash": "7236613558502401048"
+      },
+      {
+        "file": "action/nx/nx/src/generators/utils/project-configuration.d.ts",
+        "hash": "9650268921909994665"
+      },
+      {
+        "file": "action/nx/nx/src/generators/utils/project-configuration.js",
+        "hash": "15781850761141612745"
+      },
+      {
+        "file": "action/nx/nx/src/hasher/create-task-hasher.d.ts",
+        "hash": "7649495691088400731"
+      },
+      {
+        "file": "action/nx/nx/src/hasher/create-task-hasher.js",
+        "hash": "12864824231591953378"
+      },
+      {
+        "file": "action/nx/nx/src/hasher/file-hasher.d.ts",
+        "hash": "3860826755357448583"
+      },
+      {
+        "file": "action/nx/nx/src/hasher/file-hasher.js",
+        "hash": "16087790279224061162"
+      },
+      {
+        "file": "action/nx/nx/src/hasher/hash-task.d.ts",
+        "hash": "6426161210991197298"
+      },
+      {
+        "file": "action/nx/nx/src/hasher/hash-task.js",
+        "hash": "16031537073984745088"
+      },
+      {
+        "file": "action/nx/nx/src/hasher/native-task-hasher-impl.d.ts",
+        "hash": "13845784377818430812"
+      },
+      {
+        "file": "action/nx/nx/src/hasher/native-task-hasher-impl.js",
+        "hash": "1706630531067786309"
+      },
+      {
+        "file": "action/nx/nx/src/hasher/node-task-hasher-impl.d.ts",
+        "hash": "2822386541655056906"
+      },
+      {
+        "file": "action/nx/nx/src/hasher/node-task-hasher-impl.js",
+        "hash": "4663829854962017036"
+      },
+      {
+        "file": "action/nx/nx/src/hasher/task-hasher.d.ts",
+        "hash": "6420217132982264038"
+      },
+      {
+        "file": "action/nx/nx/src/hasher/task-hasher.js",
+        "hash": "409656544830000036"
+      },
+      {
+        "file": "action/nx/nx/src/index.d.ts",
+        "hash": "171522634210552313"
+      },
+      {
+        "file": "action/nx/nx/src/index.js",
+        "hash": "708852255803983485"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-15-0-0/migrate-to-inputs.d.ts",
+        "hash": "14611612587638722467"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-15-0-0/migrate-to-inputs.js",
+        "hash": "18366827539007494856"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-15-0-0/prefix-outputs.d.ts",
+        "hash": "14611612587638722467"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-15-0-0/prefix-outputs.js",
+        "hash": "17451313308485757488"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-16-0-0/remove-nrwl-cli.d.ts",
+        "hash": "14611612587638722467"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-16-0-0/remove-nrwl-cli.js",
+        "hash": "16300226853302097916"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-16-0-0/update-depends-on-to-tokens.d.ts",
+        "hash": "14611612587638722467"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-16-0-0/update-depends-on-to-tokens.js",
+        "hash": "8801444841510198234"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-16-0-0/update-nx-cloud-runner.d.ts",
+        "hash": "14611612587638722467"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-16-0-0/update-nx-cloud-runner.js",
+        "hash": "8916521600060769303"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-16-2-0/remove-run-commands-output-path.d.ts",
+        "hash": "18068191702312158953"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-16-2-0/remove-run-commands-output-path.js",
+        "hash": "2929454635640750493"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-16-8-0/escape-dollar-sign-env-variables.d.ts",
+        "hash": "15470646278785098969"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-16-8-0/escape-dollar-sign-env-variables.js",
+        "hash": "10166651086932150978"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-16-9-0/remove-project-name-and-root-format.d.ts",
+        "hash": "16904363977811089721"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-16-9-0/remove-project-name-and-root-format.js",
+        "hash": "2289822129643266063"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-17-0-0/move-cache-directory.d.ts",
+        "hash": "10961019291146315707"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-17-0-0/move-cache-directory.js",
+        "hash": "8247774649435308198"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-17-0-0/rm-default-collection-npm-scope.d.ts",
+        "hash": "657756361424122618"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-17-0-0/rm-default-collection-npm-scope.js",
+        "hash": "10823436697757182746"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-17-0-0/use-minimal-config-for-tasks-runner-options.d.ts",
+        "hash": "15513929334333114940"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-17-0-0/use-minimal-config-for-tasks-runner-options.js",
+        "hash": "9959534764816048335"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-17-2-0/move-default-base.d.ts",
+        "hash": "10131761857749045642"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-17-2-0/move-default-base.js",
+        "hash": "7668059781892411140"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-17-3-0/nx-release-path.d.ts",
+        "hash": "12777325436540961415"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-17-3-0/nx-release-path.js",
+        "hash": "7014290646247663687"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-17-3-0/update-nxw.d.ts",
+        "hash": "9664462696366678513"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-17-3-0/update-nxw.js",
+        "hash": "11955996570358521572"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-18-0-0/disable-crystal-for-existing-workspaces.d.ts",
+        "hash": "5173713252223316657"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-18-0-0/disable-crystal-for-existing-workspaces.js",
+        "hash": "16069703354373872420"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-19-2-0/move-workspace-data-directory.d.ts",
+        "hash": "15666520181877993781"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-19-2-0/move-workspace-data-directory.js",
+        "hash": "1374266453625287209"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-19-2-4/set-project-name.d.ts",
+        "hash": "15475107527639848130"
+      },
+      {
+        "file": "action/nx/nx/src/migrations/update-19-2-4/set-project-name.js",
+        "hash": "18442564921752858993"
+      },
+      {
+        "file": "action/nx/nx/src/native/assert-supported-platform.d.ts",
+        "hash": "8907895585085266267"
+      },
+      {
+        "file": "action/nx/nx/src/native/assert-supported-platform.js",
+        "hash": "8692164784634312554"
+      },
+      {
+        "file": "action/nx/nx/src/native/index.d.ts",
+        "hash": "13650284075055319208"
+      },
+      {
+        "file": "action/nx/nx/src/native/index.js",
+        "hash": "12986941654670801380"
+      },
+      {
+        "file": "action/nx/nx/src/native/native-bindings.js",
+        "hash": "10583173582211791139"
+      },
+      {
+        "file": "action/nx/nx/src/native/native-file-cache-location.d.ts",
+        "hash": "11854749789288383006"
+      },
+      {
+        "file": "action/nx/nx/src/native/native-file-cache-location.js",
+        "hash": "6162176092721932912"
+      },
+      {
+        "file": "action/nx/nx/src/native/transform-objects.d.ts",
+        "hash": "2097819407588879134"
+      },
+      {
+        "file": "action/nx/nx/src/native/transform-objects.js",
+        "hash": "9149645321312332992"
+      },
+      {
+        "file": "action/nx/nx/src/nx-cloud/debug-logger.d.ts",
+        "hash": "692922520050780247"
+      },
+      {
+        "file": "action/nx/nx/src/nx-cloud/debug-logger.js",
+        "hash": "5176207819596646684"
+      },
+      {
+        "file": "action/nx/nx/src/nx-cloud/generators/connect-to-nx-cloud/connect-to-nx-cloud.d.ts",
+        "hash": "9239592894816191699"
+      },
+      {
+        "file": "action/nx/nx/src/nx-cloud/generators/connect-to-nx-cloud/connect-to-nx-cloud.js",
+        "hash": "16285055725876624673"
+      },
+      {
+        "file": "action/nx/nx/src/nx-cloud/generators/connect-to-nx-cloud/schema.json",
+        "hash": "15551511901110605795"
+      },
+      {
+        "file": "action/nx/nx/src/nx-cloud/nx-cloud-tasks-runner-shell.d.ts",
+        "hash": "15269067477645562417"
+      },
+      {
+        "file": "action/nx/nx/src/nx-cloud/nx-cloud-tasks-runner-shell.js",
+        "hash": "6334719105345572543"
+      },
+      {
+        "file": "action/nx/nx/src/nx-cloud/resolution-helpers.d.ts",
+        "hash": "17028177216423575158"
+      },
+      {
+        "file": "action/nx/nx/src/nx-cloud/resolution-helpers.js",
+        "hash": "3293820299004784976"
+      },
+      {
+        "file": "action/nx/nx/src/nx-cloud/update-manager.d.ts",
+        "hash": "11946596493590239697"
+      },
+      {
+        "file": "action/nx/nx/src/nx-cloud/update-manager.js",
+        "hash": "16512581907730440278"
+      },
+      {
+        "file": "action/nx/nx/src/nx-cloud/utilities/axios.d.ts",
+        "hash": "8078039465135066099"
+      },
+      {
+        "file": "action/nx/nx/src/nx-cloud/utilities/axios.js",
+        "hash": "4382498099367844833"
+      },
+      {
+        "file": "action/nx/nx/src/nx-cloud/utilities/environment.d.ts",
+        "hash": "14112821464486112639"
+      },
+      {
+        "file": "action/nx/nx/src/nx-cloud/utilities/environment.js",
+        "hash": "13332209848434842705"
+      },
+      {
+        "file": "action/nx/nx/src/nx-cloud/utilities/get-cloud-options.d.ts",
+        "hash": "13290269764507760385"
+      },
+      {
+        "file": "action/nx/nx/src/nx-cloud/utilities/get-cloud-options.js",
+        "hash": "299856532529655347"
+      },
+      {
+        "file": "action/nx/nx/src/nx-cloud/utilities/url-shorten.d.ts",
+        "hash": "1834138440161722096"
+      },
+      {
+        "file": "action/nx/nx/src/nx-cloud/utilities/url-shorten.js",
+        "hash": "18346547162310003261"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/hasher/hasher.d.ts",
+        "hash": "11289031780039731783"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/hasher/hasher.js",
+        "hash": "6925693605219040530"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/index.d.ts",
+        "hash": "8120731073535667269"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/index.js",
+        "hash": "12799090871501601953"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/lock-file/lock-file.d.ts",
+        "hash": "4663780745414315742"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/lock-file/lock-file.js",
+        "hash": "7536826573850620466"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/lock-file/npm-parser.d.ts",
+        "hash": "9735794409852691854"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/lock-file/npm-parser.js",
+        "hash": "8125222983645222377"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/lock-file/pnpm-parser.d.ts",
+        "hash": "14412099059540126075"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/lock-file/pnpm-parser.js",
+        "hash": "10506696725161012880"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/lock-file/project-graph-pruning.d.ts",
+        "hash": "6729113914025709098"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/lock-file/project-graph-pruning.js",
+        "hash": "4054827173761512374"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/lock-file/utils/package-json.d.ts",
+        "hash": "4516170788360627107"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/lock-file/utils/package-json.js",
+        "hash": "13893654353559362766"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/lock-file/utils/pnpm-normalizer.d.ts",
+        "hash": "17832452558360709617"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/lock-file/utils/pnpm-normalizer.js",
+        "hash": "231615635138494442"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/lock-file/yarn-parser.d.ts",
+        "hash": "18066956132576943868"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/lock-file/yarn-parser.js",
+        "hash": "1626160090526685081"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/package-json/create-package-json.d.ts",
+        "hash": "9227430059164192012"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/package-json/create-package-json.js",
+        "hash": "3106562565900660122"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/affected/lock-file-changes.d.ts",
+        "hash": "4182647921772358880"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/affected/lock-file-changes.js",
+        "hash": "716287115605375"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/affected/npm-packages.d.ts",
+        "hash": "5880055389322945302"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/affected/npm-packages.js",
+        "hash": "4745004471193722892"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/affected/touched-projects.d.ts",
+        "hash": "10163573222644638342"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/affected/touched-projects.js",
+        "hash": "11783692724699979359"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/affected/tsconfig-json-changes.d.ts",
+        "hash": "17107893442567531014"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/affected/tsconfig-json-changes.js",
+        "hash": "18319730402927492992"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/build-dependencies/build-dependencies.d.ts",
+        "hash": "6720575510403722870"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/build-dependencies/build-dependencies.js",
+        "hash": "9083840615689014206"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/build-dependencies/explicit-package-json-dependencies.d.ts",
+        "hash": "2195445593006679345"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/build-dependencies/explicit-package-json-dependencies.js",
+        "hash": "5204821311968395478"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/build-dependencies/explicit-project-dependencies.d.ts",
+        "hash": "8061650562246613948"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/build-dependencies/explicit-project-dependencies.js",
+        "hash": "18280957279553118256"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/build-dependencies/strip-source-code.d.ts",
+        "hash": "14418027058785424218"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/build-dependencies/strip-source-code.js",
+        "hash": "8944038149580150147"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/build-dependencies/target-project-locator.d.ts",
+        "hash": "16183586729097211308"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/build-dependencies/target-project-locator.js",
+        "hash": "9033807104653725102"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/build-dependencies/typescript-import-locator.d.ts",
+        "hash": "8800860373438308830"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/build-dependencies/typescript-import-locator.js",
+        "hash": "6908574972191170843"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/build-nodes/build-npm-package-nodes.d.ts",
+        "hash": "7350171542959768970"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/project-graph/build-nodes/build-npm-package-nodes.js",
+        "hash": "14449077525858168460"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/utils/config.d.ts",
+        "hash": "6035697553935371405"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/utils/config.js",
+        "hash": "11200742158636510915"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/utils/register.d.ts",
+        "hash": "11163067626479072055"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/utils/register.js",
+        "hash": "11983077236319875364"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/utils/resolve-relative-to-dir.d.ts",
+        "hash": "2906082668298118690"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/utils/resolve-relative-to-dir.js",
+        "hash": "14049324167444699474"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/utils/typescript.d.ts",
+        "hash": "4978874828438264591"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/utils/typescript.js",
+        "hash": "2849831487874346485"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/versions.d.ts",
+        "hash": "11732784610865035872"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/js/versions.js",
+        "hash": "5036829451418197092"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/package-json-workspaces/create-nodes.d.ts",
+        "hash": "10959602224718798886"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/package-json-workspaces/create-nodes.js",
+        "hash": "4711651293378831261"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/package-json-workspaces/index.d.ts",
+        "hash": "8352410482236932281"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/package-json-workspaces/index.js",
+        "hash": "3639295853260521555"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json.d.ts",
+        "hash": "3585788858426923122"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/project-json/build-nodes/package-json-next-to-project-json.js",
+        "hash": "5101335873259883083"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/project-json/build-nodes/project-json.d.ts",
+        "hash": "17469524848415014587"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/project-json/build-nodes/project-json.js",
+        "hash": "7777996965933577967"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/target-defaults/symbols.d.ts",
+        "hash": "6545620406228852283"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/target-defaults/symbols.js",
+        "hash": "3050699832786199839"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/target-defaults/target-defaults-plugin.d.ts",
+        "hash": "5113762035329331935"
+      },
+      {
+        "file": "action/nx/nx/src/plugins/target-defaults/target-defaults-plugin.js",
+        "hash": "12439422829719275047"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/affected/affected-project-graph-models.d.ts",
+        "hash": "9573760564647264695"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/affected/affected-project-graph-models.js",
+        "hash": "10533815908077531553"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/affected/affected-project-graph.d.ts",
+        "hash": "15036236457097729032"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/affected/affected-project-graph.js",
+        "hash": "10337092236228182181"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/affected/locators/project-glob-changes.d.ts",
+        "hash": "15155803058138521149"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/affected/locators/project-glob-changes.js",
+        "hash": "13543533632466598828"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/affected/locators/workspace-json-changes.d.ts",
+        "hash": "6120891486043253898"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/affected/locators/workspace-json-changes.js",
+        "hash": "193966531656548141"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/affected/locators/workspace-projects.d.ts",
+        "hash": "9216865958692931510"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/affected/locators/workspace-projects.js",
+        "hash": "17109319687481400902"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/build-project-graph.d.ts",
+        "hash": "12235182756511226365"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/build-project-graph.js",
+        "hash": "10104528083805553418"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/error-types.d.ts",
+        "hash": "10813126809082053364"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/error-types.js",
+        "hash": "2895633449783758305"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/file-map-utils.d.ts",
+        "hash": "16222040675021769682"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/file-map-utils.js",
+        "hash": "1425679155670534098"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/file-utils.d.ts",
+        "hash": "5532637156903408846"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/file-utils.js",
+        "hash": "14878033505235069260"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/nx-deps-cache.d.ts",
+        "hash": "16153780609354839358"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/nx-deps-cache.js",
+        "hash": "3223562551597590581"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/operators.d.ts",
+        "hash": "5899601485759951388"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/operators.js",
+        "hash": "7506404330789797431"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/plugins/index.d.ts",
+        "hash": "471338996475282168"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/plugins/index.js",
+        "hash": "18173699761930063207"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/plugins/internal-api.d.ts",
+        "hash": "187606915455233619"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/plugins/internal-api.js",
+        "hash": "9603311052564265699"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/plugins/isolation/index.d.ts",
+        "hash": "6954388300075714646"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/plugins/isolation/index.js",
+        "hash": "14206476228371827920"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/plugins/isolation/messaging.d.ts",
+        "hash": "15581354775996187063"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/plugins/isolation/messaging.js",
+        "hash": "1222724331895389712"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/plugins/isolation/plugin-pool.d.ts",
+        "hash": "13060179760326164992"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/plugins/isolation/plugin-pool.js",
+        "hash": "641182344967319730"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/plugins/isolation/plugin-worker.d.ts",
+        "hash": "4595979742548113990"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/plugins/isolation/plugin-worker.js",
+        "hash": "5440896674568534631"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/plugins/loader.d.ts",
+        "hash": "5272632977614380269"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/plugins/loader.js",
+        "hash": "15967137237294189378"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/plugins/public-api.d.ts",
+        "hash": "4450814596591938954"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/plugins/public-api.js",
+        "hash": "10198091820490877164"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/plugins/utils.d.ts",
+        "hash": "967899107844477867"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/plugins/utils.js",
+        "hash": "15387382807908601923"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/project-graph-builder.d.ts",
+        "hash": "6907372584124472811"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/project-graph-builder.js",
+        "hash": "12466326638340562180"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/project-graph.d.ts",
+        "hash": "6736995087263952293"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/project-graph.js",
+        "hash": "506653436301883292"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/utils/build-all-workspace-files.d.ts",
+        "hash": "12950217764788258465"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/utils/build-all-workspace-files.js",
+        "hash": "7763566679056169028"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/utils/find-project-for-path.d.ts",
+        "hash": "6953019224918923484"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/utils/find-project-for-path.js",
+        "hash": "7996320351306376897"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/utils/implicit-project-dependencies.d.ts",
+        "hash": "11392938026302352325"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/utils/implicit-project-dependencies.js",
+        "hash": "808476580689227289"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/utils/normalize-project-nodes.d.ts",
+        "hash": "4233019341246572775"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/utils/normalize-project-nodes.js",
+        "hash": "13692745754320340425"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/utils/project-configuration-utils.d.ts",
+        "hash": "7486019421973901734"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/utils/project-configuration-utils.js",
+        "hash": "4757020711594592667"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/utils/retrieve-workspace-files.d.ts",
+        "hash": "12571111268927887812"
+      },
+      {
+        "file": "action/nx/nx/src/project-graph/utils/retrieve-workspace-files.js",
+        "hash": "14542771147110378024"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/batch/batch-messages.d.ts",
+        "hash": "2669108056825593801"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/batch/batch-messages.js",
+        "hash": "12360450933254458652"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/batch/run-batch.d.ts",
+        "hash": "4595979742548113990"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/batch/run-batch.js",
+        "hash": "3987172573589900849"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/cache.d.ts",
+        "hash": "14636667190730985579"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/cache.js",
+        "hash": "6457406720438847705"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/create-task-graph.d.ts",
+        "hash": "16162457253336433855"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/create-task-graph.js",
+        "hash": "15031057467406096946"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/default-tasks-runner.d.ts",
+        "hash": "15046203577749289067"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/default-tasks-runner.js",
+        "hash": "4676736614665927561"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/fork.d.ts",
+        "hash": "4595979742548113990"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/fork.js",
+        "hash": "4285921044419944527"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/forked-process-task-runner.d.ts",
+        "hash": "14196136698770560990"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/forked-process-task-runner.js",
+        "hash": "15434422405408294427"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/init-tasks-runner.d.ts",
+        "hash": "7381000969796531638"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/init-tasks-runner.js",
+        "hash": "6862802459763965222"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycle.d.ts",
+        "hash": "13860594169145203353"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycle.js",
+        "hash": "1888971269158805989"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/dynamic-run-many-terminal-output-life-cycle.d.ts",
+        "hash": "2397154624710354754"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/dynamic-run-many-terminal-output-life-cycle.js",
+        "hash": "9959359714737587435"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/dynamic-run-one-terminal-output-life-cycle.d.ts",
+        "hash": "16573602352589275093"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/dynamic-run-one-terminal-output-life-cycle.js",
+        "hash": "7917572751863072961"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/empty-terminal-output-life-cycle.d.ts",
+        "hash": "3768011755494532750"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/empty-terminal-output-life-cycle.js",
+        "hash": "7512030804206325571"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/formatting-utils.d.ts",
+        "hash": "10632250166666754855"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/formatting-utils.js",
+        "hash": "12797697580729843536"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/invoke-runner-terminal-output-life-cycle.d.ts",
+        "hash": "11044679783636127154"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/invoke-runner-terminal-output-life-cycle.js",
+        "hash": "18126012237760966931"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/pretty-time.d.ts",
+        "hash": "1688841512319556643"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/pretty-time.js",
+        "hash": "18137203464704145121"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/static-run-many-terminal-output-life-cycle.d.ts",
+        "hash": "6475769353600248200"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/static-run-many-terminal-output-life-cycle.js",
+        "hash": "13459875605590737054"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/static-run-one-terminal-output-life-cycle.d.ts",
+        "hash": "11783769626545498672"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/static-run-one-terminal-output-life-cycle.js",
+        "hash": "3339229573410155983"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/store-run-information-life-cycle.d.ts",
+        "hash": "6880576821550398937"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/store-run-information-life-cycle.js",
+        "hash": "4817143874448553223"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/task-profiling-life-cycle.d.ts",
+        "hash": "1116592915239049930"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/task-profiling-life-cycle.js",
+        "hash": "13504213126384431768"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/task-timings-life-cycle.d.ts",
+        "hash": "8036054215008557826"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/task-timings-life-cycle.js",
+        "hash": "1497293176253802811"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/view-logs-utils.d.ts",
+        "hash": "1985123290891873272"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/life-cycles/view-logs-utils.js",
+        "hash": "8818034212935923551"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/pseudo-ipc.d.ts",
+        "hash": "4795288703541213416"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/pseudo-ipc.js",
+        "hash": "9471567205352700158"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/pseudo-terminal.d.ts",
+        "hash": "7770716508458431642"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/pseudo-terminal.js",
+        "hash": "14975712144859031303"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/remove-old-cache-records.d.ts",
+        "hash": "4595979742548113990"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/remove-old-cache-records.js",
+        "hash": "14742993683715137676"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/run-command.d.ts",
+        "hash": "10907810523380403279"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/run-command.js",
+        "hash": "8863428694705154435"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/task-env.d.ts",
+        "hash": "1079003519701682791"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/task-env.js",
+        "hash": "4409473943571420366"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/task-graph-utils.d.ts",
+        "hash": "3910671377776939029"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/task-graph-utils.js",
+        "hash": "7255431408681413071"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/task-orchestrator.d.ts",
+        "hash": "13174609578791078197"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/task-orchestrator.js",
+        "hash": "10495927452563262192"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/tasks-runner.d.ts",
+        "hash": "13674521318526842503"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/tasks-runner.js",
+        "hash": "10533815908077531553"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/tasks-schedule.d.ts",
+        "hash": "4760750981759713670"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/tasks-schedule.js",
+        "hash": "12986156946540671253"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/utils.d.ts",
+        "hash": "16487610791238859093"
+      },
+      {
+        "file": "action/nx/nx/src/tasks-runner/utils.js",
+        "hash": "432937437378900046"
+      },
+      {
+        "file": "action/nx/nx/src/utils/ab-testing.d.ts",
+        "hash": "4271234911527000903"
+      },
+      {
+        "file": "action/nx/nx/src/utils/ab-testing.js",
+        "hash": "9978318095658499115"
+      },
+      {
+        "file": "action/nx/nx/src/utils/all-file-data.d.ts",
+        "hash": "5806712861834374370"
+      },
+      {
+        "file": "action/nx/nx/src/utils/all-file-data.js",
+        "hash": "13889653714930715902"
+      },
+      {
+        "file": "action/nx/nx/src/utils/app-root.d.ts",
+        "hash": "11135048745826754481"
+      },
+      {
+        "file": "action/nx/nx/src/utils/app-root.js",
+        "hash": "514386028254221520"
+      },
+      {
+        "file": "action/nx/nx/src/utils/assert-workspace-validity.d.ts",
+        "hash": "3084032708170926591"
+      },
+      {
+        "file": "action/nx/nx/src/utils/assert-workspace-validity.js",
+        "hash": "7103386543243253848"
+      },
+      {
+        "file": "action/nx/nx/src/utils/async-iterator.d.ts",
+        "hash": "7849865656063080790"
+      },
+      {
+        "file": "action/nx/nx/src/utils/async-iterator.js",
+        "hash": "10043915560607519375"
+      },
+      {
+        "file": "action/nx/nx/src/utils/cache-directory.d.ts",
+        "hash": "16838059146858617878"
+      },
+      {
+        "file": "action/nx/nx/src/utils/cache-directory.js",
+        "hash": "12546450015716941813"
+      },
+      {
+        "file": "action/nx/nx/src/utils/child-process.d.ts",
+        "hash": "3687708600520894678"
+      },
+      {
+        "file": "action/nx/nx/src/utils/child-process.js",
+        "hash": "12255534075254335283"
+      },
+      {
+        "file": "action/nx/nx/src/utils/chunkify.d.ts",
+        "hash": "11557994962516645319"
+      },
+      {
+        "file": "action/nx/nx/src/utils/chunkify.js",
+        "hash": "5381898459631583053"
+      },
+      {
+        "file": "action/nx/nx/src/utils/code-frames.d.ts",
+        "hash": "6315989731219003388"
+      },
+      {
+        "file": "action/nx/nx/src/utils/code-frames.js",
+        "hash": "9099197284009347013"
+      },
+      {
+        "file": "action/nx/nx/src/utils/collapse-expanded-outputs.d.ts",
+        "hash": "2831545937138042158"
+      },
+      {
+        "file": "action/nx/nx/src/utils/collapse-expanded-outputs.js",
+        "hash": "10426471541712092303"
+      },
+      {
+        "file": "action/nx/nx/src/utils/command-line-utils.d.ts",
+        "hash": "12328827670122934744"
+      },
+      {
+        "file": "action/nx/nx/src/utils/command-line-utils.js",
+        "hash": "10188842678735321395"
+      },
+      {
+        "file": "action/nx/nx/src/utils/consume-messages-from-socket.d.ts",
+        "hash": "11662339703275574343"
+      },
+      {
+        "file": "action/nx/nx/src/utils/consume-messages-from-socket.js",
+        "hash": "5580520765031568060"
+      },
+      {
+        "file": "action/nx/nx/src/utils/default-base.d.ts",
+        "hash": "13231469832607206046"
+      },
+      {
+        "file": "action/nx/nx/src/utils/default-base.js",
+        "hash": "12813148066476965966"
+      },
+      {
+        "file": "action/nx/nx/src/utils/dotenv.d.ts",
+        "hash": "15493836139839466512"
+      },
+      {
+        "file": "action/nx/nx/src/utils/dotenv.js",
+        "hash": "17293408896667470782"
+      },
+      {
+        "file": "action/nx/nx/src/utils/exit-codes.d.ts",
+        "hash": "16167490763072063489"
+      },
+      {
+        "file": "action/nx/nx/src/utils/exit-codes.js",
+        "hash": "4993872991335248937"
+      },
+      {
+        "file": "action/nx/nx/src/utils/fileutils.d.ts",
+        "hash": "11959961184697806729"
+      },
+      {
+        "file": "action/nx/nx/src/utils/fileutils.js",
+        "hash": "4203986560596695556"
+      },
+      {
+        "file": "action/nx/nx/src/utils/find-matching-projects.d.ts",
+        "hash": "10107432451364422340"
+      },
+      {
+        "file": "action/nx/nx/src/utils/find-matching-projects.js",
+        "hash": "16452207077876510986"
+      },
+      {
+        "file": "action/nx/nx/src/utils/find-workspace-root.d.ts",
+        "hash": "6309772094176681450"
+      },
+      {
+        "file": "action/nx/nx/src/utils/find-workspace-root.js",
+        "hash": "16551375863301086750"
+      },
+      {
+        "file": "action/nx/nx/src/utils/get-package-name-from-import-path.d.ts",
+        "hash": "1678688453159541405"
+      },
+      {
+        "file": "action/nx/nx/src/utils/get-package-name-from-import-path.js",
+        "hash": "7047988779312093317"
+      },
+      {
+        "file": "action/nx/nx/src/utils/git-utils.d.ts",
+        "hash": "6936236081891713055"
+      },
+      {
+        "file": "action/nx/nx/src/utils/git-utils.js",
+        "hash": "15377937909987289038"
+      },
+      {
+        "file": "action/nx/nx/src/utils/globs.d.ts",
+        "hash": "6243538581815378580"
+      },
+      {
+        "file": "action/nx/nx/src/utils/globs.js",
+        "hash": "7873012286086357806"
+      },
+      {
+        "file": "action/nx/nx/src/utils/ignore.d.ts",
+        "hash": "8713151917383279683"
+      },
+      {
+        "file": "action/nx/nx/src/utils/ignore.js",
+        "hash": "9720985340141216631"
+      },
+      {
+        "file": "action/nx/nx/src/utils/installation-directory.d.ts",
+        "hash": "10070088318580127236"
+      },
+      {
+        "file": "action/nx/nx/src/utils/installation-directory.js",
+        "hash": "5093799767137317845"
+      },
+      {
+        "file": "action/nx/nx/src/utils/is-ci.d.ts",
+        "hash": "17558177658783991338"
+      },
+      {
+        "file": "action/nx/nx/src/utils/is-ci.js",
+        "hash": "1370076178580470038"
+      },
+      {
+        "file": "action/nx/nx/src/utils/json-diff.d.ts",
+        "hash": "13697088425210040913"
+      },
+      {
+        "file": "action/nx/nx/src/utils/json-diff.js",
+        "hash": "14535583950013723605"
+      },
+      {
+        "file": "action/nx/nx/src/utils/json.d.ts",
+        "hash": "9783448058852583020"
+      },
+      {
+        "file": "action/nx/nx/src/utils/json.js",
+        "hash": "10061117022912072447"
+      },
+      {
+        "file": "action/nx/nx/src/utils/logger.d.ts",
+        "hash": "11911068954364158619"
+      },
+      {
+        "file": "action/nx/nx/src/utils/logger.js",
+        "hash": "7451820246613630362"
+      },
+      {
+        "file": "action/nx/nx/src/utils/nx-cloud-utils.d.ts",
+        "hash": "157583251520166130"
+      },
+      {
+        "file": "action/nx/nx/src/utils/nx-cloud-utils.js",
+        "hash": "17888558398583934704"
+      },
+      {
+        "file": "action/nx/nx/src/utils/nx-plugin.deprecated.d.ts",
+        "hash": "13294466263528297602"
+      },
+      {
+        "file": "action/nx/nx/src/utils/nx-plugin.deprecated.js",
+        "hash": "6382640400131598564"
+      },
+      {
+        "file": "action/nx/nx/src/utils/object-sort.d.ts",
+        "hash": "3699117278605292467"
+      },
+      {
+        "file": "action/nx/nx/src/utils/object-sort.js",
+        "hash": "581694888200854197"
+      },
+      {
+        "file": "action/nx/nx/src/utils/output.d.ts",
+        "hash": "11902989765635415290"
+      },
+      {
+        "file": "action/nx/nx/src/utils/output.js",
+        "hash": "18072051348569528087"
+      },
+      {
+        "file": "action/nx/nx/src/utils/package-json.d.ts",
+        "hash": "8885537985662863738"
+      },
+      {
+        "file": "action/nx/nx/src/utils/package-json.js",
+        "hash": "314708012645945576"
+      },
+      {
+        "file": "action/nx/nx/src/utils/package-manager.d.ts",
+        "hash": "15311307496540548436"
+      },
+      {
+        "file": "action/nx/nx/src/utils/package-manager.js",
+        "hash": "15242392020273599042"
+      },
+      {
+        "file": "action/nx/nx/src/utils/params.d.ts",
+        "hash": "10801024171193234151"
+      },
+      {
+        "file": "action/nx/nx/src/utils/params.js",
+        "hash": "6063466012056763581"
+      },
+      {
+        "file": "action/nx/nx/src/utils/path.d.ts",
+        "hash": "1762170267192980757"
+      },
+      {
+        "file": "action/nx/nx/src/utils/path.js",
+        "hash": "18361597366268919288"
+      },
+      {
+        "file": "action/nx/nx/src/utils/perf-logging.d.ts",
+        "hash": "4595979742548113990"
+      },
+      {
+        "file": "action/nx/nx/src/utils/perf-logging.js",
+        "hash": "16070011109829701050"
+      },
+      {
+        "file": "action/nx/nx/src/utils/plugins/community-plugins.d.ts",
+        "hash": "1769062851236739438"
+      },
+      {
+        "file": "action/nx/nx/src/utils/plugins/community-plugins.js",
+        "hash": "14555045061822202515"
+      },
+      {
+        "file": "action/nx/nx/src/utils/plugins/core-plugins.d.ts",
+        "hash": "10839946864918787723"
+      },
+      {
+        "file": "action/nx/nx/src/utils/plugins/core-plugins.js",
+        "hash": "11537251104731882586"
+      },
+      {
+        "file": "action/nx/nx/src/utils/plugins/index.d.ts",
+        "hash": "7294746392206564773"
+      },
+      {
+        "file": "action/nx/nx/src/utils/plugins/index.js",
+        "hash": "8334152760530075548"
+      },
+      {
+        "file": "action/nx/nx/src/utils/plugins/installed-plugins.d.ts",
+        "hash": "12633030559474050015"
+      },
+      {
+        "file": "action/nx/nx/src/utils/plugins/installed-plugins.js",
+        "hash": "3950657745954685764"
+      },
+      {
+        "file": "action/nx/nx/src/utils/plugins/local-plugins.d.ts",
+        "hash": "6220770321014081581"
+      },
+      {
+        "file": "action/nx/nx/src/utils/plugins/local-plugins.js",
+        "hash": "9655165877892142527"
+      },
+      {
+        "file": "action/nx/nx/src/utils/plugins/models.d.ts",
+        "hash": "16217981978864867800"
+      },
+      {
+        "file": "action/nx/nx/src/utils/plugins/models.js",
+        "hash": "10533815908077531553"
+      },
+      {
+        "file": "action/nx/nx/src/utils/plugins/plugin-capabilities.d.ts",
+        "hash": "5779456126374178372"
+      },
+      {
+        "file": "action/nx/nx/src/utils/plugins/plugin-capabilities.js",
+        "hash": "10506208453822200403"
+      },
+      {
+        "file": "action/nx/nx/src/utils/plugins/shared.d.ts",
+        "hash": "4155769327332893449"
+      },
+      {
+        "file": "action/nx/nx/src/utils/plugins/shared.js",
+        "hash": "9259343747573094150"
+      },
+      {
+        "file": "action/nx/nx/src/utils/print-help.d.ts",
+        "hash": "9888206510363763049"
+      },
+      {
+        "file": "action/nx/nx/src/utils/print-help.js",
+        "hash": "1973430668432558978"
+      },
+      {
+        "file": "action/nx/nx/src/utils/project-graph-utils.d.ts",
+        "hash": "10832348802315874695"
+      },
+      {
+        "file": "action/nx/nx/src/utils/project-graph-utils.js",
+        "hash": "6592390408144191267"
+      },
+      {
+        "file": "action/nx/nx/src/utils/promised-based-queue.d.ts",
+        "hash": "9967032070424635336"
+      },
+      {
+        "file": "action/nx/nx/src/utils/promised-based-queue.js",
+        "hash": "1369805521593991257"
+      },
+      {
+        "file": "action/nx/nx/src/utils/serializable-error.d.ts",
+        "hash": "17451311273106439166"
+      },
+      {
+        "file": "action/nx/nx/src/utils/serializable-error.js",
+        "hash": "6385222982670561576"
+      },
+      {
+        "file": "action/nx/nx/src/utils/serialize-overrides-into-command-line.d.ts",
+        "hash": "12403888696457318954"
+      },
+      {
+        "file": "action/nx/nx/src/utils/serialize-overrides-into-command-line.js",
+        "hash": "7232367533474523023"
+      },
+      {
+        "file": "action/nx/nx/src/utils/split-target.d.ts",
+        "hash": "11275755376551043046"
+      },
+      {
+        "file": "action/nx/nx/src/utils/split-target.js",
+        "hash": "14431135217102635068"
+      },
+      {
+        "file": "action/nx/nx/src/utils/strip-indents.d.ts",
+        "hash": "8754298554025263527"
+      },
+      {
+        "file": "action/nx/nx/src/utils/strip-indents.js",
+        "hash": "4458209333051070341"
+      },
+      {
+        "file": "action/nx/nx/src/utils/update-nxw.d.ts",
+        "hash": "14436456069739546337"
+      },
+      {
+        "file": "action/nx/nx/src/utils/update-nxw.js",
+        "hash": "10212609618017022321"
+      },
+      {
+        "file": "action/nx/nx/src/utils/versions.d.ts",
+        "hash": "5039458652453640390"
+      },
+      {
+        "file": "action/nx/nx/src/utils/versions.js",
+        "hash": "12395030066419297737"
+      },
+      {
+        "file": "action/nx/nx/src/utils/workspace-configuration-check.d.ts",
+        "hash": "15315264719054831175"
+      },
+      {
+        "file": "action/nx/nx/src/utils/workspace-configuration-check.js",
+        "hash": "16651276219391593347"
+      },
+      {
+        "file": "action/nx/nx/src/utils/workspace-context.d.ts",
+        "hash": "1002485381603681449"
+      },
+      {
+        "file": "action/nx/nx/src/utils/workspace-context.js",
+        "hash": "13698454797674738143"
+      },
+      {
+        "file": "action/nx/nx/src/utils/workspace-root.d.ts",
+        "hash": "4946694912464709846"
+      },
+      {
+        "file": "action/nx/nx/src/utils/workspace-root.js",
+        "hash": "3007891660835460989"
+      },
+      {
+        "file": "action/nx/nx/tasks-runners/default.d.ts",
+        "hash": "2327687829404379205"
+      },
+      {
+        "file": "action/nx/nx/tasks-runners/default.js",
+        "hash": "13660310372803551273"
+      },
+      {
+        "file": "action/nx/package.json",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "action/nx.darwin-arm64.node",
+        "hash": "11906210895201131755"
+      },
+      {
+        "file": "action/nx.linux-x64-gnu.node",
+        "hash": "10662416196837718320"
+      },
+      {
+        "file": "action/nx.linux-x64-musl.node",
+        "hash": "13267262016598568590"
+      },
+      {
+        "file": "action/remove-old-cache-records.js",
+        "hash": "14742993683715137676"
+      },
+      {
+        "file": "action/run-executor.js",
+        "hash": "15917572232253029522"
+      },
+      {
+        "file": "action.yml",
+        "hash": "10890810051777600204"
+      },
+      {
+        "file": "index.js",
+        "hash": "8447406043650236235"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "338796972030199201"
+      },
+      {
+        "file": "package.json",
+        "hash": "12066809230465498338"
+      }
+    ]
+  }
+}
