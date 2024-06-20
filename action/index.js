@@ -102273,30 +102273,29 @@ const { Workspaces } = __nccwpck_require__(38191);
 const { execSync } = __nccwpck_require__(32081);
 const { join } = __nccwpck_require__(71017);
 
-const [tag = null] = process.argv.slice(2);
+try {
+  const tag = core.getInput('tag', { required: true });
 
-if (!tag) {
-  console.error(`Missing tag`);
-  process.exit(1);
+  const workspace = new Workspaces(
+    join(process.cwd(), '..')
+  ).readWorkspaceConfiguration();
+
+  const projects = execSync('yarn -s nx show projects --affected') 
+    .toString('utf-8')
+    .trim()
+    .split('\n')
+    .filter((project) => !!project);
+
+  const affected = projects.filter((project) =>
+    workspace.projects[project].tags?.includes(tag)
+  );
+
+  const affectedString = affected.join(' ');
+
+  core.setOutput('affected_projects', affectedString);
+} catch (error) {
+  core.setFailed(error.message);
 }
-
-const workspace = new Workspaces(
-  join(__dirname, '..')
-).readWorkspaceConfiguration();
-
-const projects = execSync('npx nx show projects --affected') 
-  .toString('utf-8')
-  .trim()
-  .split('\n')
-  .filter((project) => !!project);
-
-const affected = projects.filter((project) =>
-  workspace.projects[project].tags?.includes(tag)
-);
-
-const affectedString = `${affected.join(' ')}`;
-
-console.log(affectedString);
 
 })();
 
