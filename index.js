@@ -2,6 +2,7 @@ const core = require('@actions/core');
 const { Workspaces } = require('@nrwl/devkit');
 const { execSync } = require('child_process');
 const { join } = require('path');
+const nx = require('nx');
 
 try {
   const tag = core.getInput('tag', { required: true });

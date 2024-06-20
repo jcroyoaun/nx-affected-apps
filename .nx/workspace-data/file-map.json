@@ -1,0 +1,69 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.3.0",
+  "deps": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^6.0.0",
+    "@nrwl/devkit": "^19.3.0",
+    "nx": "^19.3.0"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".gitignore",
+        "hash": "11467265137509401795"
+      },
+      {
+        "file": "README.md",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "action.yml",
+        "hash": "4178258072030688209"
+      },
+      {
+        "file": "action/index.js",
+        "hash": "17272904213968088837"
+      },
+      {
+        "file": "action/native-bindings.js",
+        "hash": "10583173582211791139"
+      },
+      {
+        "file": "action/nx.darwin-arm64.node",
+        "hash": "11906210895201131755"
+      },
+      {
+        "file": "action/nx.linux-x64-gnu.node",
+        "hash": "14602488879075267043"
+      },
+      {
+        "file": "action/nx.linux-x64-musl.node",
+        "hash": "2366595102290266562"
+      },
+      {
+        "file": "action/remove-old-cache-records.js",
+        "hash": "14742993683715137676"
+      },
+      {
+        "file": "action/run-executor.js",
+        "hash": "11098590799264319067"
+      },
+      {
+        "file": "index.js",
+        "hash": "2649091030418443188"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "1293289032757263772"
+      },
+      {
+        "file": "package.json",
+        "hash": "274877790553611669"
+      }
+    ]
+  }
+}
