@@ -10,7 +10,7 @@ try {
     join(process.cwd(), '..')
   ).readWorkspaceConfiguration();
 
-  const projects = execSync('npx nx show projects --affected') 
+  const projects = execSync('yarn -s show projects --affected') 
     .toString('utf-8')
     .trim()
     .split('\n')
