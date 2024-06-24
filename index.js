@@ -1,22 +1,22 @@
-const { execSync } = require('child_process');
-const path = require('path');
-
-// Add the local node_modules to the require path
-process.env.NODE_PATH = path.join(process.cwd(), 'node_modules');
-require('module').Module._initPaths();
-
-// Main logic
 const core = require('@actions/core');
 const { Workspaces } = require('@nrwl/devkit');
+const { execSync } = require('child_process');
 
 try {
   const frontendTag = core.getInput('frontend_tag');
   const backendTag = core.getInput('backend_tag');
   const includeLibs = core.getBooleanInput('include_libs');
   const allProjects = core.getBooleanInput('all_projects');
+  const workspaceDirectory = core.getInput('workspace_directory');
 
-  const workspace = new Workspaces(process.cwd()).readWorkspaceConfiguration();
-  const projects = execSync('npx nx show projects --affected')
+  // Install dependencies in the project's directory
+  execSync('yarn add nx@16.9.1 @nrwl/devkit@16.9.1 @actions/core@1.10.0', {
+    cwd: workspaceDirectory,
+    stdio: 'inherit',
+  });
+
+  const workspace = new Workspaces(workspaceDirectory).readWorkspaceConfiguration();
+  const projects = execSync('npx nx show projects --affected', { cwd: workspaceDirectory })
     .toString('utf-8')
     .trim()
     .split('\n')
