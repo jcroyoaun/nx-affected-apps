@@ -1,6 +1,9 @@
 name: 'Nx Affected Projects'
 description: 'Get affected projects in an Nx workspace'
 inputs:
+  workspace_directory:
+    description: 'Path to the workspace directory'
+    required: true
   frontend_tag:
     description: 'Tag to filter affected frontend projects'
     required: false
