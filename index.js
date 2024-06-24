@@ -1,13 +1,18 @@
 const { execSync } = require('child_process');
+const path = require('path');
 
-// Setup: Install dependencies
+// Setup: Install dependencies locally
 try {
   console.log('Installing dependencies...');
-  execSync('npm install @actions/core@1.10.0 @nrwl/devkit@16.9.1 nx@16.9.1', { stdio: 'inherit' });
+  execSync('npm init -y && npm install @actions/core@1.10.0 @nrwl/devkit@16.9.1 nx@16.9.1 --save', { stdio: 'inherit' });
 } catch (error) {
   console.error('Failed to install dependencies:', error);
   process.exit(1);
 }
+
+// Add the local node_modules to the require path
+process.env.NODE_PATH = path.join(process.cwd(), 'node_modules');
+require('module').Module._initPaths();
 
 // Main logic
 const core = require('@actions/core');
@@ -33,5 +38,6 @@ try {
   console.log(affectedString);
   core.setOutput('affected_projects', affectedString);
 } catch (error) {
-  core.setFailed(error.message);
+  console.error('Error:', error);
+  process.exit(1);
 }
