@@ -9,12 +9,6 @@ try {
   const allProjects = core.getBooleanInput('all_projects');
   const workspaceDirectory = core.getInput('workspace_directory');
 
-  // Install dependencies in the project's directory
-  execSync('yarn add nx@16.9.1 @nrwl/devkit@16.9.1 @actions/core@1.10.0 --dev', {
-    cwd: workspaceDirectory,
-    stdio: 'inherit',
-  });
-
   const workspace = new Workspaces(workspaceDirectory).readWorkspaceConfiguration();
   const projects = execSync('npx nx show projects --affected', { cwd: workspaceDirectory })
     .toString('utf-8')
