@@ -10,7 +10,7 @@ try {
   const workspaceDirectory = core.getInput('workspace_directory');
 
   // Install dependencies in the project's directory
-  execSync('yarn add nx@16.9.1 @nrwl/devkit@16.9.1 @actions/core@1.10.0', {
+  execSync('yarn add nx@16.9.1 @nrwl/devkit@16.9.1 @actions/core@1.10.0 --dev', {
     cwd: workspaceDirectory,
     stdio: 'inherit',
   });
