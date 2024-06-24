@@ -2,7 +2,7 @@ const { execSync } = require('child_process');
 const path = require('path');
 
 // Add the local node_modules to the require path
-process.env.NODE_PATH = path.join(process.cwd(), 'node_modules');
+process.env.NODE_PATH = path.join(__dirname, 'node_modules');
 require('module').Module._initPaths();
 
 // Main logic
