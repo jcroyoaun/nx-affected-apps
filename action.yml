@@ -1,12 +1,27 @@
 name: 'Nx Affected Projects'
 description: 'Get affected projects in an Nx workspace'
 inputs:
-  tag:
-    description: 'Tag to filter affected projects'
-    required: true
+  frontend_tag:
+    description: 'Tag to filter affected frontend projects'
+    required: false
+  backend_tag:
+    description: 'Tag to filter affected backend projects'
+    required: false
+  include_libs:
+    description: 'Include library projects in the output'
+    required: false
+    default: 'false'
+  all_projects:
+    description: 'Return all projects in the workspace'
+    required: false
+    default: 'false'
 outputs:
-  affected_projects:
-    description: 'Space-separated list of affected projects'
+  frontend_components:
+    description: 'Space-separated list of affected frontend projects'
+  backend_components:
+    description: 'Space-separated list of affected backend projects'
+  projects:
+    description: 'Space-separated list of affected projects based on the provided tags and options'
 runs:
   using: 'node20'
   main: 'index.js'
