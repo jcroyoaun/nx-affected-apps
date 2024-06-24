@@ -24,5 +24,4 @@ outputs:
     description: 'Space-separated list of affected projects based on the provided tags and options'
 runs:
   using: 'node20'
-  pre: 'npm ci'
   main: 'index.js'
