@@ -4,7 +4,7 @@
   "description": "GitHub Action to get affected projects in an Nx workspace",
   "main": "index.js",
   "scripts": {
-    "build-action": "ncc build index.js -o action"
+    "build-action": "ncc build index.js -o action --external nx"
   },
   "author": "",
   "license": "ISC",
