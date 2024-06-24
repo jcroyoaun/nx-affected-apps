@@ -1,9 +1,18 @@
 const { execSync } = require('child_process');
 const path = require('path');
+const fs = require('fs');
+
+// Install dependencies
+const packageJson = JSON.parse(fs.readFileSync(path.join(__dirname, 'package.json'), 'utf8'));
+Object.keys(packageJson.dependencies).forEach(dependency => {
+  const version = packageJson.dependencies[dependency];
+  execSync(`npm install ${dependency}@${version}`, { stdio: 'inherit' });
+});
 
 // Add the local node_modules to the require path
-process.env.NODE_PATH = path.join(process.cwd(), 'node_modules');
+process.env.NODE_PATH = path.join(__dirname, 'node_modules');
 require('module').Module._initPaths();
+
 
 // Main logic
 const core = require('@actions/core');
