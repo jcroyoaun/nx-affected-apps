@@ -9,4 +9,5 @@ outputs:
     description: 'Space-separated list of affected projects'
 runs:
   using: 'node20'
-  main: 'action/index.js'
+  pre: 'setup.js'
+  main: 'index.js'

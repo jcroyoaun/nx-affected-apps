@@ -6,11 +6,9 @@ const { join } = require('path');
 try {
   const tag = core.getInput('tag', { required: true });
 
-  const workspace = new Workspaces(
-    join(process.cwd(), '..')
-  ).readWorkspaceConfiguration();
+  const workspace = new Workspaces(process.cwd()).readWorkspaceConfiguration();
 
-  const projects = execSync('yarn -s show projects --affected') 
+  const projects = execSync('npx nx show projects --affected')
     .toString('utf-8')
     .trim()
     .split('\n')
@@ -22,6 +20,7 @@ try {
 
   const affectedString = affected.join(' ');
 
+  console.log(affectedString);
   core.setOutput('affected_projects', affectedString);
 } catch (error) {
   core.setFailed(error.message);
