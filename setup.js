@@ -18,6 +18,12 @@ try {
   execSync('yarn add @actions/core@1.10.0 --dev', { stdio: 'inherit' });
 
   console.log('Dependencies installed successfully.');
+
+  // Add sleep command
+  console.log('Sleeping for 5 minutes to allow examination...');
+  execSync('sleep 300', { stdio: 'inherit' });
+  console.log('Sleep finished.');
+
 } catch (error) {
   core.setFailed(`Action failed with error: ${error}`);
 }
