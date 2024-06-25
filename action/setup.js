@@ -102268,60 +102268,40 @@ module.exports = JSON.parse('{"name":"strong-log-transformer","version":"2.1.0",
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-
 const core = __nccwpck_require__(98423);
 const { execSync } = __nccwpck_require__(32081);
 const fs = __nccwpck_require__(57147);
 const path = __nccwpck_require__(71017);
 const { Workspaces } = __nccwpck_require__(38191);
-// Set up Node path
-process.env.NODE_PATH = path.join(process.cwd(), 'node_modules');
-(__nccwpck_require__(98188).Module._initPaths)();
 
-try {
-  const frontendTag = core.getInput('frontend_tag');
-  const backendTag = core.getInput('backend_tag');
-  const includeLibs = core.getBooleanInput('include_libs');
-  const allProjects = core.getBooleanInput('all_projects');
+function setup() {
+  try {
+    console.log('Starting dependency installation...');
 
-  const workspace = new Workspaces(process.cwd()).readWorkspaceConfiguration();
-  const projects = execSync('npx nx show projects --affected')
-    .toString('utf-8')
-    .trim()
-    .split('\n')
-    .filter((project) => !!project);
-
-  const frontendProjects = projects.filter((project) =>
-    workspace.projects[project].tags?.includes(frontendTag)
-  );
-  const backendProjects = projects.filter((project) =>
-    workspace.projects[project].tags?.includes(backendTag)
-  );
-
-  let affectedProjects = [];
-  if (allProjects) {
-    affectedProjects = projects;
-  } else {
-    affectedProjects = [...frontendProjects, ...backendProjects];
-    if (includeLibs) {
-      const libraryProjects = projects.filter((project) =>
-        workspace.projects[project].tags?.includes('type:lib')
-      );
-      affectedProjects = [...affectedProjects, ...libraryProjects];
+    // Remove package.json if it exists
+    if (fs.existsSync('package.json')) {
+      console.log('Removing existing package.json...');
+      fs.unlinkSync('package.json');
     }
+
+    // Install dependencies
+    console.log('Installing dependencies...');
+    execSync('yarn add nx@16.9.1 --dev', { stdio: 'inherit' });
+
+    console.log('Dependencies installed successfully.');
+
+    // Add sleep command
+    console.log('Sleeping for 5 minutes to allow examination...');
+    execSync('sleep 300', { stdio: 'inherit' });
+    console.log('Sleep finished.');
+
+  } catch (error) {
+    core.setFailed(`Action failed with error: ${error}`);
   }
-
-  const frontendString = frontendProjects.join(' ');
-  const backendString = backendProjects.join(' ');
-  const projectsString = affectedProjects.join(' ');
-
-  core.setOutput('frontend_components', frontendString);
-  core.setOutput('backend_components', backendString);
-  core.setOutput('projects', projectsString);
-} catch (error) {
-  console.error('Error:', error);
-  process.exit(1);
 }
+
+// Call the setup function
+setup();
 
 })();
 

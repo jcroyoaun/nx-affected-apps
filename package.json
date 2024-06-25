@@ -4,13 +4,14 @@
   "description": "GitHub Action to get affected projects in an Nx workspace",
   "main": "index.js",
   "scripts": {
-    "build-action": "ncc build index.js -o action",
- 		"build-setup": "ncc build setup.js -o action/setup.js"
-   },
+    "build-action": "ncc build index.js -o action --external nx",
+    "build-setup": "ncc build setup.js -o action"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@actions/core": "^1.9.1",
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^6.0.0",
     "@nrwl/devkit": "^16.9.1",
     "nx": "^16.9.1"
   }
