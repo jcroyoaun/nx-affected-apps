@@ -27,5 +27,5 @@ outputs:
     description: 'Space-separated list of affected projects based on the provided tags and options'
 runs:
   using: 'node20'
-  main: 'index.js'
+  main: 'action/index.js'
   pre: 'setup.js'

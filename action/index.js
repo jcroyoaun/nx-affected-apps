@@ -102271,30 +102271,51 @@ var __webpack_exports__ = {};
 const core = __nccwpck_require__(98423);
 const { Workspaces } = __nccwpck_require__(38191);
 const { execSync } = __nccwpck_require__(32081);
-const { join } = __nccwpck_require__(71017);
 
 try {
-  const tag = core.getInput('tag', { required: true });
+  const frontendTag = core.getInput('frontend_tag');
+  const backendTag = core.getInput('backend_tag');
+  const includeLibs = core.getBooleanInput('include_libs');
+  const allProjects = core.getBooleanInput('all_projects');
+  const workspaceDirectory = core.getInput('workspace_directory');
 
-  const workspace = new Workspaces(
-    join(process.cwd(), '..')
-  ).readWorkspaceConfiguration();
-
-  const projects = execSync('yarn -s show projects --affected') 
+  const workspace = new Workspaces(workspaceDirectory).readWorkspaceConfiguration();
+  const projects = execSync('npx nx show projects --affected', { cwd: workspaceDirectory })
     .toString('utf-8')
     .trim()
     .split('\n')
     .filter((project) => !!project);
 
-  const affected = projects.filter((project) =>
-    workspace.projects[project].tags?.includes(tag)
+  const frontendProjects = projects.filter((project) =>
+    workspace.projects[project].tags?.includes(frontendTag)
+  );
+  const backendProjects = projects.filter((project) =>
+    workspace.projects[project].tags?.includes(backendTag)
   );
 
-  const affectedString = affected.join(' ');
+  let affectedProjects = [];
+  if (allProjects) {
+    affectedProjects = projects;
+  } else {
+    affectedProjects = [...frontendProjects, ...backendProjects];
+    if (includeLibs) {
+      const libraryProjects = projects.filter((project) =>
+        workspace.projects[project].tags?.includes('type:lib')
+      );
+      affectedProjects = [...affectedProjects, ...libraryProjects];
+    }
+  }
 
-  core.setOutput('affected_projects', affectedString);
+  const frontendString = frontendProjects.join(' ');
+  const backendString = backendProjects.join(' ');
+  const projectsString = affectedProjects.join(' ');
+
+  core.setOutput('frontend_components', frontendString);
+  core.setOutput('backend_components', backendString);
+  core.setOutput('projects', projectsString);
 } catch (error) {
-  core.setFailed(error.message);
+  console.error('Error:', error);
+  process.exit(1);
 }
 
 })();
