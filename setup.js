@@ -1,12 +1,23 @@
+const core = require('@actions/core');
 const { execSync } = require('child_process');
-const path = require('path');
+const fs = require('fs');
 
 try {
+  console.log('Starting dependency installation...');
+
+  // Remove package.json if it exists
+  if (fs.existsSync('package.json')) {
+    console.log('Removing existing package.json...');
+    fs.unlinkSync('package.json');
+  }
+
+  // Install dependencies
   console.log('Installing dependencies...');
-  const actionDir = path.dirname(__filename);
-  execSync(`npm install nx@16.9.1 --prefix ${actionDir}`, { stdio: 'inherit' });
-  console.log('Dependencies installed successfully');
+  execSync('yarn add nx@16.9.1 --dev', { stdio: 'inherit' });
+  execSync('yarn add @nrwl/devkit@16.9.1 --dev', { stdio: 'inherit' });
+  execSync('yarn add @actions/core@1.10.0 --dev', { stdio: 'inherit' });
+
+  console.log('Dependencies installed successfully.');
 } catch (error) {
-  console.error('Error installing dependencies:', error);
-  process.exit(1);
+  core.setFailed(`Action failed with error: ${error}`);
 }
