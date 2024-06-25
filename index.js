@@ -2,7 +2,6 @@ const core = require('@actions/core');
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { Workspaces } = require('@nrwl/devkit');
 
 console.log('Current working directory:', process.cwd());
 console.log('Contents of current directory:', fs.readdirSync(process.cwd()));
@@ -15,7 +14,8 @@ try {
 
   console.log('Inputs:', { frontendTag, backendTag, includeLibs, allProjects });
 
-  const workspace = new Workspaces(process.cwd()).readWorkspaceConfiguration();
+  const nxJsonPath = path.join(process.cwd(), 'nx.json');
+  const workspaceConfig = JSON.parse(fs.readFileSync(nxJsonPath, 'utf8'));
   console.log('Workspace configuration read successfully');
 
   const projectsOutput = execSync('npx nx show projects --affected', { encoding: 'utf-8' });
@@ -25,10 +25,10 @@ try {
   console.log('Parsed projects:', projects);
 
   const frontendProjects = projects.filter(project => 
-    workspace.projects[project]?.tags?.includes(frontendTag)
+    workspaceConfig.projects[project]?.tags?.includes(frontendTag)
   );
   const backendProjects = projects.filter(project => 
-    workspace.projects[project]?.tags?.includes(backendTag)
+    workspaceConfig.projects[project]?.tags?.includes(backendTag)
   );
 
   console.log('Frontend projects:', frontendProjects);
@@ -41,7 +41,7 @@ try {
     affectedProjects = [...frontendProjects, ...backendProjects];
     if (includeLibs) {
       const libraryProjects = projects.filter(project => 
-        workspace.projects[project]?.tags?.includes('type:lib')
+        workspaceConfig.projects[project]?.tags?.includes('type:lib')
       );
       affectedProjects = [...affectedProjects, ...libraryProjects];
     }
