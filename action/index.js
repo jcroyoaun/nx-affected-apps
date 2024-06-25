@@ -102268,15 +102268,14 @@ module.exports = JSON.parse('{"name":"strong-log-transformer","version":"2.1.0",
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-
 const core = __nccwpck_require__(98423);
 const { execSync } = __nccwpck_require__(32081);
 const fs = __nccwpck_require__(57147);
 const path = __nccwpck_require__(71017);
 const { Workspaces } = __nccwpck_require__(38191);
-// Set up Node path
-process.env.NODE_PATH = path.join(process.cwd(), 'node_modules');
-(__nccwpck_require__(98188).Module._initPaths)();
+
+console.log('Current working directory:', process.cwd());
+console.log('Contents of current directory:', fs.readdirSync(process.cwd()));
 
 try {
   const frontendTag = core.getInput('frontend_tag');
@@ -102284,19 +102283,26 @@ try {
   const includeLibs = core.getBooleanInput('include_libs');
   const allProjects = core.getBooleanInput('all_projects');
 
-  const workspace = new Workspaces(process.cwd()).readWorkspaceConfiguration();
-  const projects = execSync('npx nx show projects --affected')
-    .toString('utf-8')
-    .trim()
-    .split('\n')
-    .filter((project) => !!project);
+  console.log('Inputs:', { frontendTag, backendTag, includeLibs, allProjects });
 
-  const frontendProjects = projects.filter((project) =>
-    workspace.projects[project].tags?.includes(frontendTag)
+  const workspace = new Workspaces(process.cwd()).readWorkspaceConfiguration();
+  console.log('Workspace configuration read successfully');
+
+  const projectsOutput = execSync('npx nx show projects --affected', { encoding: 'utf-8' });
+  console.log('Raw projects output:', projectsOutput);
+
+  const projects = projectsOutput.trim().split('\n').filter(project => !!project);
+  console.log('Parsed projects:', projects);
+
+  const frontendProjects = projects.filter(project => 
+    workspace.projects[project]?.tags?.includes(frontendTag)
   );
-  const backendProjects = projects.filter((project) =>
-    workspace.projects[project].tags?.includes(backendTag)
+  const backendProjects = projects.filter(project => 
+    workspace.projects[project]?.tags?.includes(backendTag)
   );
+
+  console.log('Frontend projects:', frontendProjects);
+  console.log('Backend projects:', backendProjects);
 
   let affectedProjects = [];
   if (allProjects) {
@@ -102304,12 +102310,14 @@ try {
   } else {
     affectedProjects = [...frontendProjects, ...backendProjects];
     if (includeLibs) {
-      const libraryProjects = projects.filter((project) =>
-        workspace.projects[project].tags?.includes('type:lib')
+      const libraryProjects = projects.filter(project => 
+        workspace.projects[project]?.tags?.includes('type:lib')
       );
       affectedProjects = [...affectedProjects, ...libraryProjects];
     }
   }
+
+  console.log('Affected projects:', affectedProjects);
 
   const frontendString = frontendProjects.join(' ');
   const backendString = backendProjects.join(' ');
@@ -102318,9 +102326,11 @@ try {
   core.setOutput('frontend_components', frontendString);
   core.setOutput('backend_components', backendString);
   core.setOutput('projects', projectsString);
+
+  console.log('Outputs set successfully');
 } catch (error) {
   console.error('Error:', error);
-  process.exit(1);
+  core.setFailed(error.message);
 }
 
 })();

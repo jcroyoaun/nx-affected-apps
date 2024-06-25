@@ -1,12 +1,11 @@
-
 const core = require('@actions/core');
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const { Workspaces } = require('@nrwl/devkit');
-// Set up Node path
-process.env.NODE_PATH = path.join(process.cwd(), 'node_modules');
-require('module').Module._initPaths();
+
+console.log('Current working directory:', process.cwd());
+console.log('Contents of current directory:', fs.readdirSync(process.cwd()));
 
 try {
   const frontendTag = core.getInput('frontend_tag');
@@ -14,19 +13,26 @@ try {
   const includeLibs = core.getBooleanInput('include_libs');
   const allProjects = core.getBooleanInput('all_projects');
 
-  const workspace = new Workspaces(process.cwd()).readWorkspaceConfiguration();
-  const projects = execSync('npx nx show projects --affected')
-    .toString('utf-8')
-    .trim()
-    .split('\n')
-    .filter((project) => !!project);
+  console.log('Inputs:', { frontendTag, backendTag, includeLibs, allProjects });
 
-  const frontendProjects = projects.filter((project) =>
-    workspace.projects[project].tags?.includes(frontendTag)
+  const workspace = new Workspaces(process.cwd()).readWorkspaceConfiguration();
+  console.log('Workspace configuration read successfully');
+
+  const projectsOutput = execSync('npx nx show projects --affected', { encoding: 'utf-8' });
+  console.log('Raw projects output:', projectsOutput);
+
+  const projects = projectsOutput.trim().split('\n').filter(project => !!project);
+  console.log('Parsed projects:', projects);
+
+  const frontendProjects = projects.filter(project => 
+    workspace.projects[project]?.tags?.includes(frontendTag)
   );
-  const backendProjects = projects.filter((project) =>
-    workspace.projects[project].tags?.includes(backendTag)
+  const backendProjects = projects.filter(project => 
+    workspace.projects[project]?.tags?.includes(backendTag)
   );
+
+  console.log('Frontend projects:', frontendProjects);
+  console.log('Backend projects:', backendProjects);
 
   let affectedProjects = [];
   if (allProjects) {
@@ -34,12 +40,14 @@ try {
   } else {
     affectedProjects = [...frontendProjects, ...backendProjects];
     if (includeLibs) {
-      const libraryProjects = projects.filter((project) =>
-        workspace.projects[project].tags?.includes('type:lib')
+      const libraryProjects = projects.filter(project => 
+        workspace.projects[project]?.tags?.includes('type:lib')
       );
       affectedProjects = [...affectedProjects, ...libraryProjects];
     }
   }
+
+  console.log('Affected projects:', affectedProjects);
 
   const frontendString = frontendProjects.join(' ');
   const backendString = backendProjects.join(' ');
@@ -48,7 +56,9 @@ try {
   core.setOutput('frontend_components', frontendString);
   core.setOutput('backend_components', backendString);
   core.setOutput('projects', projectsString);
+
+  console.log('Outputs set successfully');
 } catch (error) {
   console.error('Error:', error);
-  process.exit(1);
+  core.setFailed(error.message);
 }
