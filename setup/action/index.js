@@ -26830,7 +26830,7 @@ function setup() {
 
     // Install dependencies
     console.log('Installing dependencies...');
-    execSync('yarn add nx@16.9.1 @nrwl/devkit@16.9.1 --dev', { stdio: 'inherit' });
+    execSync('yarn add nx@16.9.1 @nrwl/devkit@16.9.1 @actions/core@1.10.0', { stdio: 'inherit' });
 
     console.log('Dependencies installed successfully.');
 

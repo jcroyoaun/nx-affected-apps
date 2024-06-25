@@ -28,5 +28,5 @@ outputs:
 runs:
   using: 'node20'
   pre: 'setup/action/index.js'
-  main: 'action/index.js'
+  main: 'index.js'
 
