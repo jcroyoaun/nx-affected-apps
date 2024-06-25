@@ -102268,6 +102268,10 @@ module.exports = JSON.parse('{"name":"strong-log-transformer","version":"2.1.0",
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
+const path = __nccwpck_require__(71017);
+process.env.NODE_PATH = path.join(__dirname, 'node_modules');
+(__nccwpck_require__(98188).Module._initPaths)();
+
 const core = __nccwpck_require__(98423);
 const { Workspaces } = __nccwpck_require__(38191);
 const { execSync } = __nccwpck_require__(32081);

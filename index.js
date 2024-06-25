@@ -1,3 +1,7 @@
+const path = require('path');
+process.env.NODE_PATH = path.join(__dirname, 'node_modules');
+require('module').Module._initPaths();
+
 const core = require('@actions/core');
 const { Workspaces } = require('@nrwl/devkit');
 const { execSync } = require('child_process');
