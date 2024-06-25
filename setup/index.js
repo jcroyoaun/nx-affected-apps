@@ -1,8 +1,6 @@
 const core = require('@actions/core');
 const { execSync } = require('child_process');
 const fs = require('fs');
-const path = require('path');
-const { Workspaces } = require('@nrwl/devkit');
 
 function setup() {
   try {
