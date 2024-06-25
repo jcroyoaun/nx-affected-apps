@@ -17,6 +17,7 @@ try {
   const nxJsonPath = path.join(process.cwd(), 'nx.json');
   const workspaceConfig = JSON.parse(fs.readFileSync(nxJsonPath, 'utf8'));
   console.log('Workspace configuration read successfully');
+  console.log('nx.json contents:', JSON.stringify(workspaceConfig, null, 2));
 
   const projectsOutput = execSync('npx nx show projects --affected', { encoding: 'utf-8' });
   console.log('Raw projects output:', projectsOutput);
@@ -24,12 +25,15 @@ try {
   const projects = projectsOutput.trim().split('\n').filter(project => !!project);
   console.log('Parsed projects:', projects);
 
-  const frontendProjects = projects.filter(project => 
-    workspaceConfig.projects[project]?.tags?.includes(frontendTag)
-  );
-  const backendProjects = projects.filter(project => 
-    workspaceConfig.projects[project]?.tags?.includes(backendTag)
-  );
+  const frontendProjects = projects.filter(project => {
+    const projectConfig = workspaceConfig.projects?.[project] || workspaceConfig[project];
+    return projectConfig?.tags?.includes(frontendTag);
+  });
+
+  const backendProjects = projects.filter(project => {
+    const projectConfig = workspaceConfig.projects?.[project] || workspaceConfig[project];
+    return projectConfig?.tags?.includes(backendTag);
+  });
 
   console.log('Frontend projects:', frontendProjects);
   console.log('Backend projects:', backendProjects);
@@ -40,9 +44,10 @@ try {
   } else {
     affectedProjects = [...frontendProjects, ...backendProjects];
     if (includeLibs) {
-      const libraryProjects = projects.filter(project => 
-        workspaceConfig.projects[project]?.tags?.includes('type:lib')
-      );
+      const libraryProjects = projects.filter(project => {
+        const projectConfig = workspaceConfig.projects?.[project] || workspaceConfig[project];
+        return projectConfig?.tags?.includes('type:lib');
+      });
       affectedProjects = [...affectedProjects, ...libraryProjects];
     }
   }
