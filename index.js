@@ -2,6 +2,7 @@ const core = require('@actions/core');
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { Workspaces } = require('@nrwl/devkit');
 
 console.log('Current working directory:', process.cwd());
 console.log('Contents of current directory:', fs.readdirSync(process.cwd()));
@@ -14,10 +15,8 @@ try {
 
   console.log('Inputs:', { frontendTag, backendTag, includeLibs, allProjects });
 
-  const nxJsonPath = path.join(process.cwd(), 'nx.json');
-  const workspaceConfig = JSON.parse(fs.readFileSync(nxJsonPath, 'utf8'));
+  const workspace = new Workspaces(process.cwd()).readWorkspaceConfiguration();
   console.log('Workspace configuration read successfully');
-  console.log('nx.json contents:', JSON.stringify(workspaceConfig, null, 2));
 
   const projectsOutput = execSync('npx nx show projects --affected', { encoding: 'utf-8' });
   console.log('Raw projects output:', projectsOutput);
@@ -25,15 +24,12 @@ try {
   const projects = projectsOutput.trim().split('\n').filter(project => !!project);
   console.log('Parsed projects:', projects);
 
-  const frontendProjects = projects.filter(project => {
-    const projectConfig = workspaceConfig.projects?.[project] || workspaceConfig[project];
-    return projectConfig?.tags?.includes(frontendTag);
-  });
-
-  const backendProjects = projects.filter(project => {
-    const projectConfig = workspaceConfig.projects?.[project] || workspaceConfig[project];
-    return projectConfig?.tags?.includes(backendTag);
-  });
+  const frontendProjects = projects.filter(project => 
+    workspace.projects[project]?.tags?.includes(frontendTag)
+  );
+  const backendProjects = projects.filter(project => 
+    workspace.projects[project]?.tags?.includes(backendTag)
+  );
 
   console.log('Frontend projects:', frontendProjects);
   console.log('Backend projects:', backendProjects);
@@ -44,10 +40,9 @@ try {
   } else {
     affectedProjects = [...frontendProjects, ...backendProjects];
     if (includeLibs) {
-      const libraryProjects = projects.filter(project => {
-        const projectConfig = workspaceConfig.projects?.[project] || workspaceConfig[project];
-        return projectConfig?.tags?.includes('type:lib');
-      });
+      const libraryProjects = projects.filter(project => 
+        workspace.projects[project]?.tags?.includes('type:lib')
+      );
       affectedProjects = [...affectedProjects, ...libraryProjects];
     }
   }
